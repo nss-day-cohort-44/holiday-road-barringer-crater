@@ -1,9 +1,7 @@
 import { getParks, useParks } from "./ParkProvider.js";
 
-const contentTarget = document.querySelector("body");
+const contentTarget = document.querySelector("#tripDropDown__parks");
 getParks().then(() => {
     const parkList = useParks();
-    contentTarget.innerHTML = `<select>
-    ${parkList.map(park => `<option>${park.fullName}</option>`)}
-    </select>`
+    contentTarget.innerHTML = parkList.map(park => `<option>${park.fullName}</option>`)
 });
