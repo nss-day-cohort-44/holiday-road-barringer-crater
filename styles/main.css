@@ -1,0 +1,33 @@
+body {
+    margin: 0px;
+}
+
+.itinerary {
+    border: 3px solid black;
+    display: flex;
+}
+
+.previewItinerary {
+    border: 3px solid black;
+    justify-content: space-between;
+    flex: 3
+}
+
+.selectedItems {
+    border: 3px solid black;
+    display: flex;
+}
+
+.parkContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.savedItineraries {
+    flex: 1
+}
+
+.selectedItems {
+    justify-content: space-between;
+}
+
