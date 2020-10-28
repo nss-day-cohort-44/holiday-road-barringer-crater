@@ -10,11 +10,14 @@ const eventHub = document.querySelector(".container")
   getEateries()
     .then(() => {
       const eateriesArray = useEateries();
-      contentTarget.innerHTML = eateriesArray.map(eatery => 
+      contentTarget.innerHTML = 
       `<option value=0>Please select an eatery</option>
-      <option value = ${eatery.id}>${eatery.businessName}</option>`)
+      ${eateriesArray.map(eatery => `<option value=${eatery.id}>${eatery.businessName}</option>`)}`
+      
   })
 //}
+
+
 
 eventHub.addEventListener("change", (changeEvent) => {
   if (changeEvent.target.id === "tripDropDown__eatery") {
