@@ -10,7 +10,7 @@ getParks().then(() => {
 });
 
 eventHub.addEventListener("change", e => {
-    if(e.target.id === "tripDropDown__parks") {
+    if(e.target.id === "tripDropDown__parks" && e.target.value !== "0") {
         const changeEvent = new CustomEvent("chosenPark", {
             detail: {
                 chosenPark: e.target.value

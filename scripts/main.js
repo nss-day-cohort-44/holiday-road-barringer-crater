@@ -5,6 +5,7 @@ import "./parks/ParkDetail.js";
 import "./attractions/AttractionsSelect.js"
 import { getAttractions } from "./attractions/AttractionProvider.js";
 import "./attractions/AttractionsList.js"
+import "./attractions/AttractionsDetail.js"
 getParks();
 getAttractions()
 console.log("Hey good lookin'")
@@ -13,6 +14,8 @@ console.log("Hey good lookin'")
 import { getEateries } from "./eateries/EateryProvider.js"
 import "./eateries/EateriesSelect.js";
 import { getWeather, useWeather } from "./weather/WeatherProvider.js";
+import "./eateries/EateriesSelect.js"
+import "./eateries/EateriesList.js"
  
 //EateriesSelect()
 getEateries()
