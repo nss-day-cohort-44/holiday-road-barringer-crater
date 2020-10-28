@@ -1,21 +1,62 @@
+header{
+    min-height: 200px;
+    background-image: url("https://images.unsplash.com/photo-1580157794506-cc7f8c924247?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1850&q=80");
+    background-position: 100% 40%;
+    text-align: center;
+    color:white;
+    padding-top: 10px;
+    
+}
+
+.tripDropDown{
+    display:flex;
+    justify-content: space-evenly;
+    padding: 20px 0px;
+    background-color: #4e7851
+    ;
+
+}
+.tripDropDown__Select{
+    flex-basis:space-evenly;
+}
+
+
 body {
     margin: 0px;
 }
 
 .itinerary {
-    border: 3px solid black;
+    border: 1px solid black;
     display: flex;
 }
 
 .previewItinerary {
-    border: 3px solid black;
+    border: 1px solid black;
     justify-content: space-between;
-    flex: 3
+    flex: 3;
+    flex-wrap: wrap;
 }
 
 .selectedItems {
-    border: 3px solid black;
     display: flex;
+    background-color: #9ebc99;
+
+}
+.selectedItemCard{
+    min-width: 33%;
+    min-height: 400px;
+    border: 1px solid black;
+}
+.selectedItemCard:hover{
+    
+        position: relative;
+        bottom: 5px;
+        box-shadow: 0 10px 5px rgba(0, 0, 0, 0.648);
+        color: #0b2350;
+    
+}
+.selectedItemCard > h2{
+    text-align: center;
 }
 
 .parkContent {
@@ -24,7 +65,10 @@ body {
 }
 
 .savedItineraries {
-    flex: 1
+    flex: 1;
+    background-color: #ccb8a8
+    ;
+
 }
 
 .selectedItems {
