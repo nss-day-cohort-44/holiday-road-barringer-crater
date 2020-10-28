@@ -4,10 +4,11 @@ const eventHub = document.querySelector(".container")
 // Targets the article element with the id of attractionCard
 const contentContainer = document.querySelector("#attractionCard")
 
-// Takes an attraction object and puts the html code into the contentContainer
+// Takes an attraction object and puts the html code into the contentContainer. Line 11 is an empty div that the details can populate to once the button is selected
 const attractionCardHtml = (attractionObj) => {
     contentContainer.innerHTML = `
         <h2>${attractionObj.name}</h2>
+        <div class="details" id="attraction--details"></div>
             <button id="attractionDetails--${attractionObj.id}">Details</button>
     `
 }
