@@ -14,6 +14,7 @@ console.log("Hey good lookin'")
 import { getEateries } from "./eateries/EateryProvider.js"
 import "./eateries/EateriesSelect.js"
 import "./eateries/EateriesList.js"
+import "./eateries/EateriesDetail.js"
  
 //EateriesSelect()
 getEateries()
