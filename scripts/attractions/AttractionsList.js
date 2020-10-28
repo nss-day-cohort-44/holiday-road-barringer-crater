@@ -22,13 +22,12 @@ eventHub.addEventListener("chosenAttraction", event => {
 
 
 // Listens for the click on the attraction card button then dispatches custom event
-// When you come back, do the split on the button id to find the attraction id and add it to line 31
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("attractionDetails")) {
-        console.log("I'm broadcasting!")
+        const [prefix, attractionId] = clickEvent.target.id.split("--")
         const detailBtnClicked = new CustomEvent("attractionDetailsRequested", {
             detail: {
-                attractionId: 2
+                attractionId,
             }
         })
         eventHub.dispatchEvent(detailBtnClicked)
