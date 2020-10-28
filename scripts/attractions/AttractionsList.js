@@ -28,7 +28,7 @@ eventHub.addEventListener("click", clickEvent => {
         const [prefix, attractionId] = clickEvent.target.id.split("--")
         const detailBtnClicked = new CustomEvent("attractionDetailsRequested", {
             detail: {
-                attractionId,
+                attractionId: parseInt(attractionId)
             }
         })
         eventHub.dispatchEvent(detailBtnClicked)
