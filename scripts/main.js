@@ -12,6 +12,16 @@ console.log("Hey good lookin'")
 
 import { getEateries } from "./eateries/EateryProvider.js"
 import "./eateries/EateriesSelect.js";
+import { getWeather, useWeather } from "./weather/WeatherProvider.js";
  
 //EateriesSelect()
 getEateries()
+
+
+getWeather()
+    .then(() => {
+      const weatherArray = useWeather()
+      console.log(weatherArray)
+        console.log(weatherArray[1])
+
+      })
