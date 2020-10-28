@@ -8,13 +8,17 @@ export const useWeather = () => {
     console.log("weather conditions",newWeather[5].weather[0].main)
     const returnUsableWeather=(fullArray)=>{
         let newArrayOfWeather=[]
-        for (let i=5; i<fullArray.length;i+8){
-            console.log(i)
+        for (let i=5; i<fullArray.length;i+=8){
+            let pushThis={
+                temperature:Math.floor(fullArray[i].main.temp-273.15),
+                weather:fullArray[i].weather[0].main
+            }
+            newArrayOfWeather.push(pushThis)
+            
         }
-
+        return newArrayOfWeather
     }
-    returnUsableWeather(newWeather)
-    return newWeather;
+    return returnUsableWeather(newWeather);
 }
 
 export const getWeather = () => {
