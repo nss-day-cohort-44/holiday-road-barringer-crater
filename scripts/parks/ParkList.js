@@ -8,7 +8,8 @@ eventHub.addEventListener("chosenPark", e => {
     headerTarget.innerHTML = useParks().find(park => park.id === e.detail.chosenPark).fullName;
     detailTarget.innerHTML = `<p>Weather goes here</p>
     <div class="details" id="parkDetails">
-    <button id="parkDetails--${e.detail.chosenPark}">Details</button>`;
+    <button id="parkDetails--${e.detail.chosenPark}">Details</button>
+    </div>`;
 });
 
 eventHub.addEventListener("click", e => {
