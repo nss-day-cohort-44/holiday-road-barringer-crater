@@ -22,6 +22,6 @@ getWeather()
     .then(() => {
       const weatherArray = useWeather()
       console.log(weatherArray)
-        console.log(weatherArray[1])
+        // console.log(weatherArray[5].main.temp)
 
       })
