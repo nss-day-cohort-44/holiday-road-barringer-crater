@@ -9,7 +9,7 @@ console.log("Hey good lookin'")
 
 
 import { getEateries } from "./eateries/EateryProvider.js"
-import { EateriesSelect } from "./eateries/EateriesSelect.js";
+import "./eateries/EateriesSelect.js";
  
-EateriesSelect()
+//EateriesSelect()
 getEateries()

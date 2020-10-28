@@ -5,7 +5,7 @@ const contentTarget = document.querySelector("#tripDropDown__eatery")
 const eventHub = document.querySelector(".container")
 
 
-export const EateriesSelect = () => {
+//const export EateriesSelect = () => {
  
   getEateries()
     .then(() => {
@@ -14,7 +14,7 @@ export const EateriesSelect = () => {
       `<option value=0>Please select an eatery</option>
       <option value = ${eatery.id}>${eatery.businessName}</option>`)
   })
-}
+//}
 
 eventHub.addEventListener("change", (changeEvent) => {
   if (changeEvent.target.id === "tripDropDown__eatery") {
@@ -24,6 +24,7 @@ eventHub.addEventListener("change", (changeEvent) => {
         chosenEatery: parseInt(changeEvent.target.value)
       }
     })
+    console.log(eatery)
     eventHub.dispatchEvent(eatery)
   }
 })
