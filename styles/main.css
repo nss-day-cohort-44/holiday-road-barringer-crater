@@ -11,6 +11,8 @@ header{
 .tripDropDown{
     display:flex;
     justify-content: space-evenly;
+    padding: 20px 0px;
+
 }
 .tripDropDown__Select{
     flex-basis:space-evenly;
@@ -22,14 +24,16 @@ body {
 }
 
 .itinerary {
-    border: 3px solid black;
+    border: 1px solid black;
     display: flex;
 }
 
 .previewItinerary {
-    border: 3px solid black;
+    border: 1px solid black;
     justify-content: space-between;
-    flex: 3
+    flex: 3;
+    flex-wrap: wrap;
+    background-color: teal;
 }
 
 .selectedItems {
