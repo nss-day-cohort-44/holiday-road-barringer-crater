@@ -9,7 +9,7 @@ getAttractions().then(()=>{
         const attactionsList=useAttractions()
         contentTarget.innerHTML=
         `
-        <option id=0> Please select an attraction</option>
+        <option value=0> Please select an attraction</option>
         ${attactionsList.map(attraction => `<option value=${attraction.id}>${attraction.name}</option>`)}`
      })
 
