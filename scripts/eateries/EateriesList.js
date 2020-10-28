@@ -9,6 +9,8 @@ const eventHub = document.querySelector(".container")
 // Listens to the eventHub in eateries select and renders dropdown choice to DOM
 eventHub.addEventListener("chosenEatery", e => {
   //where do I put these changes?
+  // const headerTarget = document.querySelector("#eateryCard h2");
+  // const detailTarget = document.querySelector(".eateryContent");
   const contentTarget = document.querySelector("#eateryCard")
 
   // creates single HTML 'card' to put in contentTarget
