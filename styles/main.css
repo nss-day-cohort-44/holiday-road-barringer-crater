@@ -33,12 +33,21 @@ body {
     justify-content: space-between;
     flex: 3;
     flex-wrap: wrap;
-    background-color: teal;
 }
 
 .selectedItems {
     border: 3px solid black;
     display: flex;
+    background-color: #9ebc99;
+
+}
+.selectedItemCard{
+    min-width: 33%;
+    min-height: 300px;
+    border: 1px solid black;
+}
+.selectedItemCard > h2{
+    text-align: center;
 }
 
 .parkContent {
