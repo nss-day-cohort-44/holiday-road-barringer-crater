@@ -5,7 +5,7 @@ const contentTarget = document.querySelector("#tripDropDown__parks");
 
 getParks().then(() => {
     const parkList = useParks();
-    contentTarget.innerHTML = `<option>Please select a park</option> 
+    contentTarget.innerHTML = `<option value="0">Please select a park</option> 
     ${parkList.map(park => `<option value="${park.id}">${park.fullName}</option>`).join("")}`
 });
 
