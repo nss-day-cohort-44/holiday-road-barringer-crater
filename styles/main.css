@@ -1,3 +1,12 @@
+header{
+    min-height: 200px;
+    background-image: url("https://images.unsplash.com/photo-1580157794506-cc7f8c924247?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1850&q=80");
+    background-position: 100% 40%;
+    text-align: center;
+    color:white
+    
+}
+
 body {
     margin: 0px;
 }
