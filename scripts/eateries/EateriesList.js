@@ -1,4 +1,4 @@
-import {getEateries, useEateries} from "./EateryProvider.js"
+import {useEateries} from "./EateryProvider.js"
 
 const eventHub = document.querySelector(".container")
 
