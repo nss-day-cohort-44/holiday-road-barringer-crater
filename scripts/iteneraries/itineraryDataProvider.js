@@ -25,14 +25,14 @@ export const saveItinerary = (itenObj) => {
 
 eventHub.addEventListener("click", e => {
     if(e.target.id === "itinerarySave" && e.target.classList.contains("buttonSelectable")) {
-        const park = document.querySelector("#tripDropDown__parks").value;
-        const attraction = parseInt(document.querySelector("#tripDropDown__attractions").value);
-        const eatery = parseInt(document.querySelector("#tripDropDown__eatery").value);
+        const parkId = document.querySelector("#tripDropDown__parks").value;
+        const attractionIds = parseInt(document.querySelector("#tripDropDown__attractions").value);
+        const eateryId = parseInt(document.querySelector("#tripDropDown__eatery").value);
 
         saveItinerary( {
-            park,
-            attraction,
-            eatery
+            parkId,
+            attractionIds,
+            eateryId
         });
     }
 });
