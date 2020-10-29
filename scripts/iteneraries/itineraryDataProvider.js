@@ -1,3 +1,5 @@
+import { readableObjects } from "./SavedIteneraries.js";
+
 // Empty array to eventually store the objects from the local api
 let savedItineraries = []
 const eventHub = document.querySelector(".container");
@@ -20,7 +22,7 @@ export const saveItinerary = (itenObj) => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(itenObj)
-    })
+    }).then(getItineraries).then(readableObjects)
 }
 
 eventHub.addEventListener("click", e => {
