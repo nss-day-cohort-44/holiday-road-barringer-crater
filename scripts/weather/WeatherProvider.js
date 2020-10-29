@@ -3,16 +3,7 @@ import keys from "../Settings.js";
 let weather = [];
 const eventHub=document.querySelector(".container")
 // creating an event listener that uses the get weather for the city
-eventHub.addEventListener("chosenPark",e=>{
-    // listens for park select and finds the city the park is in
-    const park = useParks().find(park => park.id === e.detail.chosenPark).addresses[0].city
-    getWeather(park)
-    .then(() => {
-      const weatherArray = useWeather()
-      console.log(weatherArray)
-        // console.log(weatherArray[5].main.temp)
 
-      })})
 
 
 export const useWeather = () => {
@@ -34,6 +25,8 @@ export const useWeather = () => {
     }
     return returnUsableWeather(newWeather);
 }
+
+
 
 export const getWeather = (city) => {
     return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${keys.weatherKey}`)
