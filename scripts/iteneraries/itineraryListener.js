@@ -2,7 +2,6 @@ const eventHub = document.querySelector(".container");
 
 export const checkItenerary = (ev) => {
 
-    console.log(ev.target.value)
     const eateries = document.querySelector("#tripDropDown__eatery").value;
     const attractions = document.querySelector("#tripDropDown__attractions").value;
     const parks = document.querySelector("#tripDropDown__parks").value;
