@@ -26,8 +26,8 @@ dispatchAttractionDetail()
 dispatchEatariesDetail()
 dispatchParkDetail()
 
-dispatchSavedItineraries()
 dispatchWeather()
+dispatchSavedItineraries()
 // import { getParks } from "./parks/ParkProvider.js";
 // import "./parks/ParkSelect.js";
 // import "./parks/ParkList.js";
