@@ -19,10 +19,12 @@ const attractionCardHtml = (attractionObj) => {
 
 // Listens for the change event from attractionSelect.js
 eventHub.addEventListener("chosenAttraction", event => {
+    if(event.detail.chosenAttraction !== 0) {
         const attractionId = event.detail.chosenAttraction
         const attractionArray = useAttractions()
         const chosenAttraction = attractionArray.find(attractionObj => attractionObj.id === attractionId)
         attractionCardHtml(chosenAttraction)
+    }
 })
 
 

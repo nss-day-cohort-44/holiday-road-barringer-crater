@@ -10,6 +10,7 @@ const eventHub = document.querySelector(".container")
 
 // Listens to the eventHub in eateries select and renders dropdown choice to DOM
 eventHub.addEventListener("chosenEatery", e => {
+  if(e.detail.chosenEatery) {
   //where do I put these changes?
   // const headerTarget = document.querySelector("#eateryCard h2");
   // const detailTarget = document.querySelector(".eateryContent");
@@ -32,6 +33,7 @@ eventHub.addEventListener("chosenEatery", e => {
   //within that array, when the id matches your chosen id, you add that to eateryCard which is added to the Dom
   const chosenEatery = eateryArray.find(eateryObj => eateryObj.id === eateryId)
   eateryCardHTML(chosenEatery)
+}
 
 })
 

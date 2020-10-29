@@ -5,7 +5,8 @@ export const dispatchWeather=()=>{
 const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("chosenPark", e => {
-// finds the park city 
+    if(e.detail.chosenPark !== "0"){
+    // finds the park city 
     const park = useParks().find(park => park.id === e.detail.chosenPark).addresses[0].city
     getWeather(park)
         .then(() => {
@@ -20,9 +21,7 @@ eventHub.addEventListener("chosenPark", e => {
             console.log(weatherHTMLString)
             contentTarget.innerHTML = `<p>5 Day Forecast</p>${weatherHTMLString}`
         })
-
-
-
+    }
 })
 
 const render = (weatherObj) => {
