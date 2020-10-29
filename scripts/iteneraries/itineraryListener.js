@@ -14,7 +14,7 @@ export const checkItenerary = (ev) => {
     }
     eventHub.dispatchEvent(e);
 }
-export const dispatchItineraryListern=()=>{
+export const dispatchItineraryListener=()=>{
 eventHub.addEventListener("chosenPark", checkItenerary);
 eventHub.addEventListener("chosenEatery", checkItenerary);
 eventHub.addEventListener("chosenAttraction", checkItenerary);

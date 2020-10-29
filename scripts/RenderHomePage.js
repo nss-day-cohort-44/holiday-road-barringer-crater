@@ -43,7 +43,7 @@ const render=()=>{
                 </div>
             </article>
           </section> <!--closes selected Items  -->
-          <button class="itinerarySave">Save Itinerary</button>
+          <button id="itinerarySave" class="buttonUnselectable">Save Itinerary</button>
      </section>  <!--closes preview Itinerary -->
      <aside class="savedItineraries">
               Saved itineraries will go here
