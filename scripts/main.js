@@ -10,14 +10,13 @@ getParks();
 getAttractions()
 console.log("Hey good lookin'")
 
-
 import { getEateries } from "./eateries/EateryProvider.js"
 import "./eateries/EateriesSelect.js";
 import "./weather/WeatherProvider.js";
 import "./eateries/EateriesSelect.js"
 import "./eateries/EateriesList.js"
  
-//EateriesSelect()
 getEateries()
 
-
+import "./weather/WeatherProvider.js"
+import "./weather/Weather.js"
