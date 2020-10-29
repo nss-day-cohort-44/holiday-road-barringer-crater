@@ -1,3 +1,10 @@
+
+import { homePageList } from "./RenderHomePage.js";
+
+//EateriesSelect()
+
+homePageList()
+
 import { getParks } from "./parks/ParkProvider.js";
 import "./parks/ParkSelect.js";
 import "./parks/ParkList.js";
@@ -18,8 +25,4 @@ import "./eateries/EateriesSelect.js"
 import "./eateries/EateriesList.js"
 import { getItineraries, useItineraries } from "./iteneraries/itineraryDataProvider.js";
 import "./eateries/EateriesDetail.js"
- 
-//EateriesSelect()
 getEateries()
-
-
