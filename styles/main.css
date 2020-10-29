@@ -58,14 +58,6 @@ h1 {
     /* font-size: 15px; */
 }
 
-.buttonSelectable {
-    background-color: red;
-}
-
-.buttonUnselectable {
-    background-color: blue;
-}
-
 body {
     margin: 0px;
 }
@@ -141,13 +133,13 @@ body {
     color: #fff;
 }
 
-.itinerarySave:hover,
+.buttonSelectable:hover,
 .btn-filled:hover,
 .btn-ghost:hover {
         background-color: #393b44; 
 }
 
-#itinerarySave {
+.buttonSelectable {
     
     padding: 10px 30px 10px 30px;
     text-decoration: none;
@@ -156,6 +148,18 @@ body {
     color: white;
     border: 1px solid #fff;
     background-color: #666d8c;   
+    padding: 10px 30px;
+    margin: 10px;
+}
+
+.buttonUnselectable {
+    padding: 10px 30px 10px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    color: white;
+    border: 1px solid #fff;
+    background-color: #bababa;   
     padding: 10px 30px;
     margin: 10px;
 }
