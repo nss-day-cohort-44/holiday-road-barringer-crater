@@ -14,7 +14,7 @@ const detailContainer = document.querySelector("#eatery--details")
 })
 
 eventHub.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id === "hideEateryDetails") {
+    if (clickEvent.target.id === "hideEateryDetails" ) {
         const hideDetailEvent = 
         document.querySelector("#eatery--details")
         hideDetailEvent.innerHTML = ""

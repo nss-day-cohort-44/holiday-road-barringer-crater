@@ -9,15 +9,16 @@ const eventHub = document.querySelector(".container")
 //const export EateriesSelect = () => {
  
   getEateries()
-    .then(() => {
-      const eateriesArray = useEateries();
-      contentTarget.innerHTML = 
-      `<option value=0>Please select an eatery</option>
-      ${eateriesArray.map(eatery => `<option value=${eatery.id}>${eatery.businessName}</option>`)}`
-      
-  })
-//}
+  .then(() => {
+    const eateriesArray = useEateries()
 
+   contentTarget.innerHTML = 
+    `<option value=0>Please select an eatery</option>
+    ${eateriesArray.map(eatery => {
+      if (eatery.ameneties.wheelchairAccessible == true) {
+        return `<option value=${eatery.id}>${eatery.businessName}</option>`}})}`    
+    })
+  
 
 
 eventHub.addEventListener("change", (changeEvent) => {
@@ -33,3 +34,4 @@ eventHub.addEventListener("change", (changeEvent) => {
   }
 })
 }
+
