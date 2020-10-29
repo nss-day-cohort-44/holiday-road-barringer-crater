@@ -34,6 +34,8 @@ const render=()=>{
             </article> <!-- closes park card-->
             <article class="selectedItemCard" id="attractionCard">
                 <h2>Entertainment Selected</h2>
+                <div class="attractionContent"></div>
+            </article>
             </article> <!-- closes attraction card-->
             <article class="selectedItemCard" id="eateryCard">
                 <h2>Eatery Selected</h2>
