@@ -1,23 +1,61 @@
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
 header{
     min-height: 200px;
-    background-image: url("https://images.unsplash.com/photo-1580157794506-cc7f8c924247?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1850&q=80");
-    background-position: 100% 40%;
-    text-align: center;
-    color:white;
-    padding-top: 10px;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.80)), url("https://images.unsplash.com/photo-1508182314998-3bd49473002f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
     
+    background-size: cover;
+    /* background-position: center;  */
+    height: 22em;
+    background-attachment: fixed;
+    /* //background-position: 100% 40%; */
+    text-align: left;
+    color: white;
+    padding: 300px 0 0 120px;
+    
+}
+
+h1 {
+    font-size: 250%;
+    font-weight: 300;
+    word-spacing: 4px; 
+    letter-spacing: 2px;
+}
+
+.headingh2 {
+    font-weight: 300;
+    font-style: italic;
 }
 
 .tripDropDown{
     display:flex;
     justify-content: space-evenly;
-    padding: 20px 0px;
-    background-color: #4e7851
-    ;
+    padding: 60px 0px;
+    background-color: rgb(220, 219, 219);
+    /* background-color: #393b44; */
+    
 
 }
-.tripDropDown__Select{
+.tripDropDown__Select {
     flex-basis:space-evenly;
+    padding: 10px 0;
+    font-size: 14px;
+    background-color: rgb(220, 219, 219);
+    /* background-color: #d6e0f0; */
+    border-radius: 10px;
+    
+}
+
+.tripDropDown__Select:hover{
+    background-color: rgb(142, 140, 140);
+    
+    /* font-size: 15px; */
 }
 
 
@@ -39,7 +77,7 @@ body {
 
 .selectedItems {
     display: flex;
-    background-color: #9ebc99;
+    background-color: rgb(177, 177, 177);
 
 }
 .selectedItemCard{
@@ -52,7 +90,8 @@ body {
         position: relative;
         bottom: 5px;
         box-shadow: 0 10px 5px rgba(0, 0, 0, 0.648);
-        color: #0b2350;
+        color: #555;
+        
     
 }
 .selectedItemCard > h2{
@@ -66,7 +105,7 @@ body {
 
 .savedItineraries {
     flex: 1;
-    background-color: #ccb8a8
+    background-color: #8d93ab
     ;
 
 }
@@ -75,3 +114,41 @@ body {
     justify-content: space-between;
 }
 
+.btn {
+    padding: 10px 30px 10px 30px;
+    display: inline-block;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    color: white;
+    border: 1px solid #fff;
+    margin-right: 30px;
+    margin-top: 30px;
+    
+}
+
+.btn-filled:link,
+.btn-filled:visited {
+    background-color: #666d8c;
+    color: #fff;
+}
+
+.itinerarySave:hover,
+.btn-filled:hover,
+.btn-ghost:hover {
+        background-color: #393b44; 
+}
+
+.itinerarySave {
+    
+    padding: 10px 30px 10px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    color: white;
+    border: 1px solid #fff;
+    background-color: #666d8c;   
+    padding: 10px 30px;
+    margin: 10px;
+}
