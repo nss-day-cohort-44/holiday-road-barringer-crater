@@ -18,6 +18,7 @@ import "./eateries/EateriesSelect.js";
 import "./weather/WeatherProvider.js";
 import "./eateries/EateriesSelect.js"
 import "./eateries/EateriesList.js"
+import "./eateries/EateriesDetail.js"
  
 //EateriesSelect()
 getEateries()

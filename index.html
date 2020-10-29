@@ -5,15 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.css">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
     <title>Holiday Road</title>
 </head>
 
 <body>
     <header>
         <div>
-        <h1>Navigating Through National Parks</h1>
+        <h1>Navigating National Parks</h1>
+        <h2 class="headingh2">Make Your Own Story</h2>
+        <a class="btn-filled btn" href="#">Plan My Trip</a>
+        
+        <a class="btn-ghost btn" href="#">See Saved Trips</a>
         </div>
     </header>
+    
     <main class="container">
 <section class="tripDropDown">
     <select class="tripDropDown__Select" id="tripDropDown__parks">
@@ -42,6 +49,8 @@
             </article> <!-- closes attraction card-->
             <article class="selectedItemCard" id="eateryCard">
                 <h2>Eatery Selected</h2>
+                <div class="eateryContent">
+                </div>
             </article>
           </section> <!--closes selected Items  -->
           <button class="itinerarySave">Save Itinerary</button>
