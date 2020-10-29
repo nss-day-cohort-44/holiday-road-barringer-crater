@@ -1,5 +1,5 @@
 import { useAttractions } from "./AttractionProvider.js"
-
+export const dispatchAttractionDetail=()=>{
 // Targets the main element as the eventHub
 const eventHub = document.querySelector(".container")
 
@@ -31,3 +31,4 @@ eventHub.addEventListener("detailsHidden", clickEvent => {
         const detailContainer = document.querySelector("#attraction--details")
         detailContainer.innerHTML = `<div class="details" id="attraction--details"><button id="attractionDetails--${clickEvent.detail.attractionId}">Details</button></div>`
 })
+}

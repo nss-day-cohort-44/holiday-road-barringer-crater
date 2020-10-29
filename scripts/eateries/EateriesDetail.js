@@ -1,5 +1,5 @@
 import { useEateries } from "./EateryProvider.js"
-
+export const dispatchEatariesDetail=()=>{
 const eventHub = document.querySelector(".container")
 
 
@@ -28,4 +28,4 @@ eventHub.addEventListener("hideEateryDetails", clickEvent => {
        const hideDetailEvent = document.querySelector("#eatery--details")
         hideDetailEvent.innerHTML = `<div class="details" id="eatery--details"><button id="eateryDetails--${clickEvent.detail.eateryId}">Details</button></div>`
     
-})
+})}

@@ -2,7 +2,7 @@ import { getItineraries, useItineraries } from "./itineraryDataProvider.js"
 import { getParks, useParks } from "../parks/ParkProvider.js"
 import { getEateries, useEateries } from "../eateries/EateryProvider.js"
 import { getAttractions, useAttractions } from "../attractions/AttractionProvider.js"
-
+export const dispatchSavedItineraries=()=>{
 const contentContainer = document.querySelector(".savedItineraries")
 
 // Takes an object and makes it html readable
@@ -17,7 +17,7 @@ const render = (itineraryObj) => {
 }
 
 // Takes the objects from the local api and converts them into an object with names instead of just id numbers
-export const readableObjects = () => {
+const readableObjects = () => {
     getParks()
         .then(getItineraries)
         .then(getEateries)
@@ -45,4 +45,6 @@ export const readableObjects = () => {
             }
         })
 
+}
+readableObjects()
 }

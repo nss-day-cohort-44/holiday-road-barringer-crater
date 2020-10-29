@@ -1,28 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+const contentTarget=document.querySelector(".container")
+const eventHub=document.querySelector(".container")
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/main.css">
-   
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
-    <title>Holiday Road</title>
-</head>
-
-<body>
-    <header>
-        <div>
-        <h1>Navigating National Parks</h1>
-        <h2 class="headingh2">Make Your Own Story</h2>
-        <a class="btn-filled btn" href="#">Plan My Trip</a>
-        
-        <a class="btn-ghost btn" href="#">See Saved Trips</a>
-        </div>
-    </header>
+export const homePageList=()=>{
+    // display the roster
+    const homePageHTML=render()
+    contentTarget.innerHTML=homePageHTML  
     
-    <main class="container">
-<!-- <section class="tripDropDown">
+}
+
+const render=()=>{
+    return `
+    <section class="tripDropDown">
     <select class="tripDropDown__Select" id="tripDropDown__parks">
         <option value="0">Select a national park</option>
         <option value="1">Cool park</option>
@@ -35,7 +23,7 @@
         <option value="0">Select an eatery</option>
         <option value="1">Cool eatery</option>
     </select>
- </section> 
+ </section> <!--closes the trip drop down section -->
  <section class="itinerary">
      <section class="previewItinerary">
          <section class="selectedItems">
@@ -43,23 +31,28 @@
                 <h2>Name of park</h2>
                 <div class="parkContent">
                 </div>
-            </article> 
+            </article> <!-- closes park card-->
             <article class="selectedItemCard" id="attractionCard">
                 <h2>Entertainment Selected</h2>
                 <div class="attractionContent"></div>
-            </article> closes attraction card
+            </article>
+            </article> <!-- closes attraction card-->
             <article class="selectedItemCard" id="eateryCard">
                 <h2>Eatery Selected</h2>
                 <div class="eateryContent">
                 </div>
             </article>
-          </section> 
-          <button class="itinerarySave">Save Itinerary</button>
-     </section>  closes preview Itinerary -->
-     <!-- <aside class="savedItineraries"></aside>
-</section>  -->
-        <script type="module" src="./scripts/main.js"></script>
-    </main>
-</body>
+          </section> <!--closes selected Items  -->
+          <button id="itinerarySave" class="buttonUnselectable">Save Itinerary</button>
+     </section>  <!--closes preview Itinerary -->
+     <aside class="savedItineraries">
+              Saved itineraries will go here
+    </aside>
+ </section>
 
-</html>
+    `
+}
+export const importStuff=()=>{
+    
+
+}

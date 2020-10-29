@@ -1,5 +1,7 @@
 import { getAttractions, useAttractions } from "./AttractionProvider.js"
 
+export const dispatchAttractionSelect=()=>{
+
 const eventHub=document.querySelector(".container") 
 
 // this part populates the attraction dropdown menu from the api
@@ -27,3 +29,4 @@ eventHub.addEventListener("change", event => {
         eventHub.dispatchEvent(attraction)
     }
 })
+}
