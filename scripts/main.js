@@ -16,6 +16,7 @@ import "./eateries/EateriesSelect.js";
 import "./weather/WeatherProvider.js";
 import "./eateries/EateriesSelect.js"
 import "./eateries/EateriesList.js"
+import { getItineraries, useItineraries } from "./iteneraries/itineraryDataProvider.js";
 import "./eateries/EateriesDetail.js"
  
 //EateriesSelect()
