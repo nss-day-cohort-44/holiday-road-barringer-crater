@@ -18,14 +18,10 @@ import "./eateries/EateriesSelect.js"
 import "./eateries/EateriesList.js"
 import { getItineraries, useItineraries } from "./iteneraries/itineraryDataProvider.js";
 import "./eateries/EateriesDetail.js"
-import { SavedItinerariesList, readableObjects } from "./iteneraries/SavedIteneraries.js";
+import {readableObjects } from "./iteneraries/SavedIteneraries.js";
  
-//EateriesSelect()
+
 getEateries()
-// getItineraries()
-// .then(() => {
-  SavedItinerariesList()
-// })
-// readableObjects()
+ readableObjects()
 
 

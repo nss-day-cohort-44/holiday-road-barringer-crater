@@ -5,6 +5,7 @@ import { getAttractions, useAttractions } from "../attractions/AttractionProvide
 
 const contentContainer = document.querySelector(".savedItineraries")
 
+// Takes an object and makes it html readable
 const render = (itineraryObj) => {
     contentContainer.innerHTML += `
     <div class="savedItineraryCard">
@@ -15,55 +16,33 @@ const render = (itineraryObj) => {
     `
 }
 
+// Takes the objects from the local api and converts them into an object with names instead of just id numbers
 export const readableObjects = () => {
     getParks()
         .then(getItineraries)
         .then(getEateries)
         .then(getAttractions)
         .then(() => {
-            let ObjectsArr = []
+            const ObjectsArr = []
             const parksArr = useParks()
             // console.log("parks", parksArr)
             const savedItineraries = useItineraries()
-            // console.log("itineraries: ", savedItineraries)
+            console.log("itineraries: ", savedItineraries)
             const attractionsArr = useAttractions()
             // console.log("attractions", attractionsArr)
             const eateryArr = useEateries()
             // console.log("eateries: ", eateryArr)
             for (const itinerary of savedItineraries) {
                 ObjectsArr.push({
-                    Park: parksArr.find(parkObj => parkObj.id === itinerary.parkId),
+                    park: parksArr.find(parkObj => parkObj.id === itinerary.parkId),
                     attraction: attractionsArr.find(attractionObj => attractionObj.id === parseInt(itinerary.attractionIds)),
                     eatery: eateryArr.find(eateryObj => eateryObj.id === parseInt(itinerary.eateryId))
                 })
             }
-            console.log("new object: ", ObjectsArr)
-            return ObjectsArr
+            // console.log("new objects: ", ObjectsArr)
+            for (const itinerary of ObjectsArr) {
+                render(itinerary)
+            }
         })
 
 }
-
-
-
-export const SavedItinerariesList = () => {
-    const ItinerariesArray = readableObjects()
-    console.log ("ItinerariesArray", ItinerariesArray)
-    for (const itinerary of ItinerariesArray) {
-        render(itinerary)
-    }
-}
-// export const SavedItinerariesList = () => {
-//     getParks()
-//         .then(getItineraries)
-//         .then(() => {
-//             // let savedItinerariesString = ""
-//             const parksArr = useParks()
-//             const savedItineraries = useItineraries()
-//             const selectedParks = savedItineraries.map(itinObj => {
-//                 return parksArr.find(parkObj => parkObj.id === itinObj.parkId)
-//             })
-//             for (const itin of selectedParks) {
-//                 render(itin)
-//             }
-//         })
-// }
