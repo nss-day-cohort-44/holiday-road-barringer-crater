@@ -7,9 +7,9 @@ export const checkItenerary = () => {
     const parks = document.querySelector("#tripDropDown__parks").value;
     let e;
     if(parks !== "0" && eateries !== "0" && attractions !== "0") {
-        e = CustomEvent("itenerarySelected");
+        e = new CustomEvent("itenerarySelected");
     } else {
-        e = CustomEvent("iteneraryUnselected");
+        e = new CustomEvent("iteneraryUnselected");
     }
 
     eventHub.dispatchEvent(e);
