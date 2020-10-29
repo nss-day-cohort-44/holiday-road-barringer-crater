@@ -12,15 +12,17 @@ eventHub.addEventListener("chosenEatery", e => {
   //where do I put these changes?
   // const headerTarget = document.querySelector("#eateryCard h2");
   // const detailTarget = document.querySelector(".eateryContent");
-  const contentTarget = document.querySelector("#eateryCard")
+  const contentHeader = document.querySelector("#eateryCard h2")
+  const contentTarget = document.querySelector(".eateryContent")
 
   // creates single HTML 'card' to put in contentTarget
   const eateryCardHTML = (eateryObj) => {
+    contentHeader.innerHTML = `
+      <h2>${eateryObj.businessName}</h2>`
     contentTarget.innerHTML = `
-      <h2>${eateryObj.businessName}</h2>
-      <div class="details" id="eatery--details"></div>
-      <button id="eateryDetails--${eateryObj.id}">Details</button>
-    `
+      <div class="details" id="eatery--details"><button id="eateryDetails--${eateryObj.id}">Details</button></div>
+      `
+    
   }
   //pull parsed ID from select event
   const eateryId = e.detail.chosenEatery

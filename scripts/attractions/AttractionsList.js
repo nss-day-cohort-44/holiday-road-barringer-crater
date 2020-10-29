@@ -2,15 +2,17 @@ import {useAttractions} from "./AttractionProvider.js"
 //  Targets the main container as the eventhub
 const eventHub = document.querySelector(".container")
 // Targets the article element with the id of attractionCard
-const contentContainer = document.querySelector("#attractionCard")
+const contentHeader = document.querySelector("#attractionCard h2")
+const contentTarget = document.querySelector(".attractionContent")
 
 // Takes an attraction object and puts the html code into the contentContainer. Line 11 is an empty div that the details can populate to once the button is selected
 const attractionCardHtml = (attractionObj) => {
-    contentContainer.innerHTML = `
-        <h2>${attractionObj.name}</h2>
-        <div class="details" id="attraction--details"></div>
-            <button id="attractionDetails--${attractionObj.id}">Details</button>
-    `
+    contentHeader.innerHTML = `
+        <h2>${attractionObj.name}</h2>`
+    contentTarget.innerHTML = `
+        <div class="details" id="attraction--details"><button id="attractionDetails--${attractionObj.id}">Details</button></div>
+            `
+    
 }
 
 // Listens for the change event from attractionSelect.js
