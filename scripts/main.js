@@ -6,13 +6,9 @@ import "./attractions/AttractionsSelect.js"
 import { getAttractions } from "./attractions/AttractionProvider.js";
 import "./attractions/AttractionsList.js"
 import "./attractions/AttractionsDetail.js"
-<<<<<<< HEAD
 import "./iteneraries/itineraryListener.js"
 
 getParks();
-=======
-getParks()
->>>>>>> master
 getAttractions()
 console.log("Hey good lookin'")
 
