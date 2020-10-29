@@ -14,7 +14,7 @@ export const checkItenerary = (ev) => {
     }
     eventHub.dispatchEvent(e);
 }
-
+export const dispatchItineraryListern=()=>{
 eventHub.addEventListener("chosenPark", checkItenerary);
 eventHub.addEventListener("chosenEatery", checkItenerary);
 eventHub.addEventListener("chosenAttraction", checkItenerary);
@@ -26,3 +26,4 @@ eventHub.addEventListener("itenerarySelected", e => {
 eventHub.addEventListener("iteneraryUnselected", e => {
     document.querySelector("#itinerarySave").className = "buttonUnselectable";
 }) 
+}

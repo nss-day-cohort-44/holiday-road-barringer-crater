@@ -11,6 +11,7 @@ import { dispatchParkList } from "./parks/ParkList.js";
 import { dispatchParkSelect } from "./parks/ParkSelect.js";
 import { dispatchSavedItineraries } from "./iteneraries/SavedIteneraries.js";
 import { dispatchWeather } from "./weather/Weather.js";
+import {  dispatchItineraryListern } from "./iteneraries/itineraryListener.js";
 
 homePageList()
 dispatchAttractionSelect()
@@ -28,6 +29,7 @@ dispatchParkDetail()
 
 dispatchWeather()
 dispatchSavedItineraries()
+dispatchItineraryListern()
 // import { getParks } from "./parks/ParkProvider.js";
 // import "./parks/ParkSelect.js";
 // import "./parks/ParkList.js";
