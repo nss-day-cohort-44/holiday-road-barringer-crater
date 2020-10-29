@@ -1,5 +1,7 @@
 import {useAttractions} from "./AttractionProvider.js"
 //  Targets the main container as the eventhub
+export const dispatchAttractionList=()=>{
+
 const eventHub = document.querySelector(".container")
 // Targets the article element with the id of attractionCard
 const contentContainer = document.querySelector("#attractionCard")
@@ -34,3 +36,4 @@ eventHub.addEventListener("click", clickEvent => {
         eventHub.dispatchEvent(detailBtnClicked)
     }
 })
+}

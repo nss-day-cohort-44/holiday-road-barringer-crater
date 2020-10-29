@@ -1,4 +1,6 @@
 import { useParks } from "./ParkProvider.js"
+export const dispatchParkList=()=>{
+
 const eventHub = document.querySelector(".container");
 
 eventHub.addEventListener("chosenPark", e => {
@@ -23,3 +25,4 @@ eventHub.addEventListener("click", e => {
         eventHub.dispatchEvent(detailEvent);
     }
 });
+}

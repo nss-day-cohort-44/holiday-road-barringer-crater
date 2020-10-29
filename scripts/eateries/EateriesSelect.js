@@ -1,5 +1,6 @@
 import {getEateries, useEateries} from "./EateryProvider.js"
 
+export const dispatchEatariesSelect=()=>{
 
 const contentTarget = document.querySelector("#tripDropDown__eatery")
 const eventHub = document.querySelector(".container")
@@ -31,3 +32,4 @@ eventHub.addEventListener("change", (changeEvent) => {
     eventHub.dispatchEvent(eatery)
   }
 })
+}
