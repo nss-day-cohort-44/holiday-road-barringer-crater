@@ -16,6 +16,7 @@ import "./eateries/EateriesSelect.js";
 import { getWeather, useWeather } from "./weather/WeatherProvider.js";
 import "./eateries/EateriesSelect.js"
 import "./eateries/EateriesList.js"
+import { getItineraries, useItineraries } from "./iteneraries/itineraryDataProvider.js";
  
 //EateriesSelect()
 getEateries()
@@ -27,4 +28,10 @@ getWeather()
       console.log(weatherArray)
         // console.log(weatherArray[5].main.temp)
 
+      })
+
+      getItineraries()
+      .then(() => {
+        const savedItems = useItineraries()
+        console.log("itinerary", savedItems)
       })
