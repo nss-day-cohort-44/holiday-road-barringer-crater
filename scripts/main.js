@@ -10,7 +10,6 @@ getParks()
 getAttractions()
 console.log("Hey good lookin'")
 
-
 import { getEateries } from "./eateries/EateryProvider.js"
 import "./eateries/EateriesSelect.js";
 import "./weather/WeatherProvider.js";
@@ -20,8 +19,8 @@ import { getItineraries, useItineraries } from "./iteneraries/itineraryDataProvi
 import "./eateries/EateriesDetail.js"
 import {readableObjects } from "./iteneraries/SavedIteneraries.js";
  
-
 getEateries()
- readableObjects()
+readableObjects()
 
-
+import "./weather/WeatherProvider.js"
+import "./weather/Weather.js"

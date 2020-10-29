@@ -98,10 +98,10 @@ body {
     text-align: center;
 }
 
-.parkContent {
-    display: flex;
+/* .parkContent {
+    
     justify-content: space-between;
-}
+} */
 
 .savedItineraries {
     flex: 1;
