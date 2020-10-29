@@ -6,7 +6,7 @@ import "./attractions/AttractionsSelect.js"
 import { getAttractions } from "./attractions/AttractionProvider.js";
 import "./attractions/AttractionsList.js"
 import "./attractions/AttractionsDetail.js"
-getParks();
+getParks()
 getAttractions()
 console.log("Hey good lookin'")
 
@@ -18,8 +18,14 @@ import "./eateries/EateriesSelect.js"
 import "./eateries/EateriesList.js"
 import { getItineraries, useItineraries } from "./iteneraries/itineraryDataProvider.js";
 import "./eateries/EateriesDetail.js"
+import { SavedItinerariesList, readableObjects } from "./iteneraries/SavedIteneraries.js";
  
 //EateriesSelect()
 getEateries()
+// getItineraries()
+// .then(() => {
+  SavedItinerariesList()
+// })
+// readableObjects()
 
 
