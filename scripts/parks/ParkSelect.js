@@ -1,5 +1,5 @@
 import { getParks, useParks } from "./ParkProvider.js";
-
+export const dispatchParkSelect=()=>{
 const eventHub = document.querySelector(".container");
 const contentTarget = document.querySelector("#tripDropDown__parks");
 
@@ -19,4 +19,5 @@ eventHub.addEventListener("change", e => {
         eventHub.dispatchEvent(changeEvent);
     }
 })
+}
 

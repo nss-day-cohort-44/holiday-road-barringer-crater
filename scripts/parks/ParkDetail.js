@@ -1,4 +1,5 @@
 import { useParks } from "./ParkProvider.js";
+export const dispatchParkDetail=()=>{
 
 const eventHub = document.querySelector(".container");
 
@@ -23,3 +24,4 @@ eventHub.addEventListener("parkHideDetailsRequested", e => {
     const detailTarget = document.querySelector("#parkDetails");
     detailTarget.innerHTML = `<button id="parkDetails--${e.detail.parkId}">Details</button>`
 })
+}

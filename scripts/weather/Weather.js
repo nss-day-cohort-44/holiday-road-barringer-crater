@@ -1,5 +1,7 @@
 import { getWeather, useWeather } from "./WeatherProvider.js"
 import { useParks } from '../parks/ParkProvider.js'
+
+export const dispatchWeather=()=>{
 const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("chosenPark", e => {
@@ -28,4 +30,5 @@ const render = (weatherObj) => {
     
     `
 
+}
 }

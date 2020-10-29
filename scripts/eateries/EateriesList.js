@@ -1,5 +1,7 @@
 import {useEateries} from "./EateryProvider.js"
 
+export const dispatchEatariesList=()=>{
+
 const eventHub = document.querySelector(".container")
 
 
@@ -49,4 +51,4 @@ eventHub.addEventListener("click", e => {
       eventHub.dispatchEvent(eateryDetailClicked);
   }
 })
-
+}
