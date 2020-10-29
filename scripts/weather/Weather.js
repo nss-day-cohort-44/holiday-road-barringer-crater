@@ -3,16 +3,14 @@ import { useParks } from '../parks/ParkProvider.js'
 const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("chosenPark", e => {
-
+// finds the park city 
     const park = useParks().find(park => park.id === e.detail.chosenPark).addresses[0].city
     getWeather(park)
         .then(() => {
-            const weatherPatterns = useWeather()
-            console.log(weatherPatterns)
+            // find the place to display the weather
             const contentTarget = document.querySelector(".displayWeather")
-            console.log("here is the content Target", contentTarget)
             let weatherHTMLString = ""
-
+            // gets the useWeather function
             const weatherArray = useWeather()
             for (const weather of weatherArray) {
                 weatherHTMLString += render(weather)
