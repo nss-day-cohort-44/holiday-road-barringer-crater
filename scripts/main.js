@@ -6,7 +6,7 @@ import "./attractions/AttractionsSelect.js"
 import { getAttractions } from "./attractions/AttractionProvider.js";
 import "./attractions/AttractionsList.js"
 import "./attractions/AttractionsDetail.js"
-import "./iteneraries/IntereraryListener.js"
+import "./iteneraries/itineraryListener.js"
 
 getParks();
 getAttractions()

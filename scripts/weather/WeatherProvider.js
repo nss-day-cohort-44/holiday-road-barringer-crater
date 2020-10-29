@@ -4,6 +4,7 @@ let weather = [];
 const eventHub=document.querySelector(".container")
 // creating an event listener that uses the get weather for the city
 eventHub.addEventListener("chosenPark",e=>{
+    if(e.detail.chosenPark !== "0") {
     // listens for park select and finds the city the park is in
     const park = useParks().find(park => park.id === e.detail.chosenPark).addresses[0].city
     getWeather(park)
@@ -12,7 +13,8 @@ eventHub.addEventListener("chosenPark",e=>{
       console.log(weatherArray)
         // console.log(weatherArray[5].main.temp)
 
-      })})
+})}})
+    
 
 
 export const useWeather = () => {

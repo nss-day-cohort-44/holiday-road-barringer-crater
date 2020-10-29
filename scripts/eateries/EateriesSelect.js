@@ -20,7 +20,7 @@ const eventHub = document.querySelector(".container")
 
 
 eventHub.addEventListener("change", (changeEvent) => {
-  if (changeEvent.target.id === "tripDropDown__eatery" && changeEvent.target.value !== "0") {
+  if (changeEvent.target.id === "tripDropDown__eatery") {
     //console.log("change in dropdown")
     const eatery = new CustomEvent("chosenEatery", {
       detail: {

@@ -58,6 +58,13 @@ h1 {
     /* font-size: 15px; */
 }
 
+.buttonSelectable {
+    background-color: red;
+}
+
+.buttonUnselectable {
+    background-color: blue;
+}
 
 body {
     margin: 0px;
@@ -140,7 +147,7 @@ body {
         background-color: #393b44; 
 }
 
-.itinerarySave {
+#itinerarySave {
     
     padding: 10px 30px 10px 30px;
     text-decoration: none;
