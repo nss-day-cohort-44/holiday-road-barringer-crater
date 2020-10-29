@@ -9,9 +9,11 @@ import { dispatchEatariesList } from "./eateries/EateriesList.js";
 import { dispatchParkDetail } from "./parks/ParkDetail.js";
 import { dispatchParkList } from "./parks/ParkList.js";
 import { dispatchParkSelect } from "./parks/ParkSelect.js";
-import { dispatchSavedItineraries } from "./iteneraries/SavedIteneraries.js";
+//import { dispatchSavedItineraries } from "./iteneraries/SavedIteneraries.js";
 import { dispatchWeather } from "./weather/Weather.js";
 import {  dispatchItineraryListener } from "./iteneraries/itineraryListener.js";
+import "./iteneraries/SavedIteneraries.js"
+import { readableObjects } from "./iteneraries/SavedIteneraries.js";
 
 homePageList()
 dispatchAttractionSelect()
@@ -28,8 +30,9 @@ dispatchEatariesDetail()
 dispatchParkDetail()
 
 dispatchWeather()
-dispatchSavedItineraries()
+//dispatchSavedItineraries()
 dispatchItineraryListener()
+readableObjects();
 // import { getParks } from "./parks/ParkProvider.js";
 // import "./parks/ParkSelect.js";
 // import "./parks/ParkList.js";
