@@ -14,14 +14,18 @@ import { dispatchWeather } from "./weather/Weather.js";
 
 homePageList()
 dispatchAttractionSelect()
+dispatchParkSelect()
+dispatchEatariesSelect()
+
 dispatchAttractionList()
+dispatchEatariesList()
+dispatchParkList()
+
+
 dispatchAttractionDetail()
 dispatchEatariesDetail()
-dispatchEatariesSelect()
-dispatchEatariesList()
 dispatchParkDetail()
-dispatchParkList()
-dispatchParkSelect()
+
 dispatchSavedItineraries()
 dispatchWeather()
 // import { getParks } from "./parks/ParkProvider.js";
