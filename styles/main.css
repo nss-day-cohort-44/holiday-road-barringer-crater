@@ -64,7 +64,7 @@ body {
 
 .itinerary {
     border: 1px solid black;
-    display: flex;
+    /* display: flex; */
 }
 
 .previewItinerary {
@@ -96,6 +96,16 @@ body {
 .selectedItemCard > h2{
     text-align: center;
 }
+.savedItineraries{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.savedItineraryCard{
+    flex-basis: 30%;
+border: 1px solid black;
+}
 
 /* .parkContent {
     
@@ -104,8 +114,7 @@ body {
 
 .savedItineraries {
     flex: 1;
-    background-color: #8d93ab
-    ;
+    background-color: #8d93ab;
 
 }
 
