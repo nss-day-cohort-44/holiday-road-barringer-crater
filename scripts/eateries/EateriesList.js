@@ -24,7 +24,6 @@ eventHub.addEventListener("chosenEatery", e => {
     contentTarget.innerHTML = `
       <div class="details" id="eatery--details"><button id="eateryDetails--${eateryObj.id}">Details</button></div>
       `
-    
   }
   //pull parsed ID from select event
   const eateryId = e.detail.chosenEatery
@@ -33,6 +32,10 @@ eventHub.addEventListener("chosenEatery", e => {
   //within that array, when the id matches your chosen id, you add that to eateryCard which is added to the Dom
   const chosenEatery = eateryArray.find(eateryObj => eateryObj.id === eateryId)
   eateryCardHTML(chosenEatery)
+  document.querySelector("#eateryAdd").className = "buttonSelectable"
+} else {
+  document.querySelector("#eateryAdd").className = "buttonUnselectable"
+
 }
 
 })
@@ -50,5 +53,16 @@ eventHub.addEventListener("click", e => {
       //console.log("eaterybutton clicked", eateryDetailClicked)
       eventHub.dispatchEvent(eateryDetailClicked);
   }
+  else if(e.target.id === "eateryAdd") {
+    //console.log("it was clicked")
+    const eateryId = document.querySelector("#tripDropDown__eatery").value 
+    const addEateryBtnClicked = new CustomEvent("eateryAdded", {
+        detail: {
+            eateryId: parseInt(eateryId)
+        }
+    })
+    console.log("Does this work?",addEateryBtnClicked)
+    eventHub.dispatchEvent(addEateryBtnClicked)
+}
 })
 }
