@@ -1,6 +1,6 @@
 html {
     background-color: #fff;
-    color: #555;
+    /* color: #555; */
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 20px;
@@ -38,7 +38,7 @@ h1 {
     display:flex;
     justify-content: space-evenly;
     padding: 60px 0px;
-    background-color: rgb(220, 219, 219);
+    background-color: rgb(0, 24, 24);
     /* background-color: #393b44; */
     
 
@@ -47,7 +47,7 @@ h1 {
     flex-basis:space-evenly;
     padding: 10px 0;
     font-size: 14px;
-    background-color: rgb(220, 219, 219);
+    background-color: rgb(184, 184, 184);
     /* background-color: #d6e0f0; */
     border-radius: 10px;
     
@@ -77,7 +77,7 @@ body {
 
 .selectedItems {
     display: flex;
-    background-color: rgb(177, 177, 177);
+    background-color: rgb(206, 206, 206);
 
 }
 .selectedItemCard{
@@ -89,18 +89,24 @@ body {
     
         position: relative;
         bottom: 5px;
-        box-shadow: 0 10px 5px rgba(0, 0, 0, 0.648);
-        color: #555;
+        box-shadow: 0 10px 5px rgb(0, 24, 24);
+        
+        
         
     
 }
-.selectedItemCard > h2{
+.selectedItemCard > h2,
+.savedItineraryCard > h2, 
+h4, 
+h2{
     text-align: center;
 }
+
 .savedItineraries{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
 
 }
 .savedItineraryCard{
@@ -110,10 +116,6 @@ body {
     
 }
 
-.savedItineraryCard > h2{
-    justify-content: center;
-    
-}
 
 /* .parkContent {
     
@@ -122,15 +124,22 @@ body {
 
 .savedItineraries {
     flex: 1;
-    background-color: #bdc1d0;
+    background-color: #d7dced;
 
 }
 
 .selectedItems {
     justify-content: space-between;
 }
-
+.buttonBar {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(0, 24, 24);
+    
+    
+}
 .btn {
+    
     padding: 10px 30px 10px 30px;
     display: inline-block;
     font-weight: 300;

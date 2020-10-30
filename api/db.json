@@ -65,6 +65,20 @@
       "attractionIds": 25,
       "eateryId": 31,
       "id": 11
-    }
+    },
+    [
+      {
+        "id": 21,
+        "type": "eatery"
+      },
+      {
+        "id": 9,
+        "type": "attraction"
+      },
+      {
+        "id": "3B8307B3-54AB-4E5F-ACBC-8DECB98AD5F1",
+        "type": "park"
+      }
+    ]
   ]
 }

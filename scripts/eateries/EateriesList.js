@@ -61,7 +61,7 @@ eventHub.addEventListener("click", e => {
             eateryId: parseInt(eateryId)
         }
     })
-    console.log("Does this work?",addEateryBtnClicked)
+    // console.log("Does this work?",addEateryBtnClicked)
     eventHub.dispatchEvent(addEateryBtnClicked)
 }
 })
