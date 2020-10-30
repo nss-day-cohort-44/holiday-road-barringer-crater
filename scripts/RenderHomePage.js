@@ -24,7 +24,7 @@ const render = () => {
         <option value="1">Cool eatery</option>
     </select>
  </section> <!--closes the trip drop down section -->
- <section class="itinerary">
+ <section class="itinerary" id="planAnchor">
      <section class="previewItinerary">
          <section class="selectedItems">
             <article class="selectedItemCard" id="parkCard">
@@ -53,7 +53,7 @@ const render = () => {
               Working itinerary will go here
      </aside>
     </section>
-     <aside class="savedItineraries">
+     <aside class="savedItineraries" id="savedAnchor">
              
     </aside>
     <footer>© Barringer Crater, Inc. All rights reserved.</footer>
