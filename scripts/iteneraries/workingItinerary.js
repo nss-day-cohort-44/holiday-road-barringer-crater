@@ -1,5 +1,6 @@
 import { useAttractions } from "../attractions/AttractionProvider.js"
 import { useEateries } from "../eateries/EateryProvider.js"
+import { useParks } from "../parks/ParkProvider.js"
 
 //attractionAdded
 const eventHub = document.querySelector(".container")
@@ -30,7 +31,7 @@ export const dispatchWorkingItinerary = () => {
     //ends if
   })//ends eventHub
   eventHub.addEventListener("eateryAdded", e=>{
-    console.log("hi")
+    // console.log("hi")
     if (e.detail.eateryId !==0) {
       const eateriesArray=useEateries()
       
@@ -44,9 +45,31 @@ export const dispatchWorkingItinerary = () => {
         type:"eatery"
       })
     }
-
+    
   })
 
-
+  eventHub.addEventListener("ParkAdded", e=>{
+  const parkContentTarget=document.querySelector(".addedParksHere")
+    if (e.detail.parkId !==0) {
+      const parksArray=useParks()
+      
+      const currentPark=parksArray.find(parkObj => parkObj.id=== e.detail.parkId)
+      parkContentTarget.innerHTML=
+      `
+        <h3>${currentPark.name}</h3>
+      `
+      // this makes sure that only one park can be on the list
+      for (let i=0;i<workingItinerariesArray.length;i++){
+        if (workingItinerariesArray[i].type==="park"){
+          workingItinerariesArray.splice([i],1)
+        }
+      }
+      workingItinerariesArray.push({
+        id:currentPark.id,
+        type:"park"
+      })
+      console.log(workingItinerariesArray)
+    }
+  })
 } //ends export
 

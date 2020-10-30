@@ -13,7 +13,10 @@ eventHub.addEventListener("chosenPark", e => {
     <div class="details" id="parkDetails">
     <button id="parkDetails--${e.detail.chosenPark}">Details</button>
     </div>`;
-    }
+    document.querySelector("#parkAdd").className = "buttonSelectable"
+    }else {
+        document.querySelector("#parkAdd").className = "buttonUnselectable"}
+    
 });
 
 eventHub.addEventListener("click", e => {
@@ -25,6 +28,16 @@ eventHub.addEventListener("click", e => {
             }
         });
         eventHub.dispatchEvent(detailEvent);
+    } else if(e.target.id === "parkAdd") {
+        //console.log("it was clicked")
+        const parkId = document.querySelector("#tripDropDown__parks").value 
+        const addParkBtnClicked = new CustomEvent("ParkAdded", {
+            detail: {
+                parkId: parkId
+            }
+        })
+        // console.log("Does this work?",addParkBtnClicked)
+        eventHub.dispatchEvent(addParkBtnClicked)
     }
 });
 }

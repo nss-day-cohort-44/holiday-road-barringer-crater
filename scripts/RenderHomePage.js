@@ -44,13 +44,23 @@ const render = () => {
             </article>
           </section> <!--closes selected Items  -->
           <div class="buttonBar">
-            <button id="itinerarySave" class="buttonUnselectable">Save Itinerary</button>
+            <button id="parkAdd" class="buttonUnselectable">Add Park</button>
+            
             <button id="attractionAdd" class="buttonUnselectable">Add Attraction</button>
             <button id="eateryAdd" class="buttonUnselectable">Add Eatery</button>
           </div>
      </section>  <!--closes preview Itinerary -->
-     <aside class="workingItineraries">
-              Working itinerary will go here
+     <aside >
+         Your Plans
+         <div class="addedParksHere">
+        
+         </div>
+        <div class="workingItineraries">
+        
+        </div>
+        <div>            
+        <button id="itinerarySave" class="buttonUnselectable">Save Itinerary</button>
+        </div>
      </aside>
     </section>
      <aside class="savedItineraries">
