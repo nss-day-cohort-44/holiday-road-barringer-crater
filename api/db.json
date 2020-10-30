@@ -1,64 +1,60 @@
 {
   "itineraries": [
-    {
-      "id": 1,
-      "parkId": "77E0D7F0-1942-494A-ACE2-9004D2BDC59E",
-      "attractionIds": 9,
-      "eateryId": 5
-    },
-    {
-      "id": 2,
-      "parkId": "77E0D7F0-1942-494A-ACE2-9004D2BDC59E",
-      "attractionIds": 9,
-      "eateryId": 5
-    },
-    {
-      "id": 3,
-      "parkId": "77E0D7F0-1942-494A-ACE2-9004D2BDC59E",
-      "attractionIds": 9,
-      "eateryId": 5
-    },
-    {
-      "parkId": "1A47416F-DAA3-4137-9F30-14AF86B4E547",
-      "attractionIds": 7,
-      "eateryId": 22,
-      "id": 4
-    },
-    {
-      "parkId": "6DA17C86-088E-4B4D-B862-7C1BD5CF236B",
-      "attractionIds": 5,
-      "eateryId": 19,
-      "id": 5
-    },
-    {
-      "parkId": "9463E25C-7342-4A34-9537-4A6DA74B2B06",
-      "attractionIds": 4,
-      "eateryId": 21,
-      "id": 6
-    },
-    {
-      "parkId": "7D6098F9-3F75-4775-A56D-CD9C7F9A9488",
-      "attractionIds": 8,
-      "eateryId": 20,
-      "id": 7
-    },
-    {
-      "parkId": "712044CE-4C85-48C2-813E-310A9C6C74E1",
-      "attractionIds": 47,
-      "eateryId": 27,
-      "id": 8
-    },
-    {
-      "parkId": "7FF37F14-88C8-469E-A447-ACE6D9AF44D2",
-      "attractionIds": 38,
-      "eateryId": 28,
-      "id": 9
-    },
-    {
-      "parkId": "3B8307B3-54AB-4E5F-ACBC-8DECB98AD5F1",
-      "attractionIds": 20,
-      "eateryId": 20,
-      "id": 10
-    }
+    [
+      {
+        "id": 5,
+        "type": "attraction"
+      },
+      {
+        "id": 5,
+        "type": "attraction"
+      },
+      {
+        "id": 7,
+        "type": "eatery"
+      },
+      {
+        "id": 7,
+        "type": "eatery"
+      },
+      {
+        "id": 7,
+        "type": "eatery"
+      },
+      {
+        "id": 7,
+        "type": "eatery"
+      }
+    ],
+    [
+      {
+        "id": 22,
+        "type": "eatery"
+      },
+      {
+        "id": 4,
+        "type": "attraction"
+      },
+      {
+        "id": 20,
+        "type": "eatery"
+      },
+      {
+        "id": 27,
+        "type": "eatery"
+      },
+      {
+        "id": 3,
+        "type": "attraction"
+      },
+      {
+        "id": 31,
+        "type": "eatery"
+      },
+      {
+        "id": 18,
+        "type": "attraction"
+      }
+    ]
   ]
 }
