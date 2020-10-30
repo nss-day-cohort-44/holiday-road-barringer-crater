@@ -4,11 +4,13 @@ import { useParks } from "../parks/ParkProvider.js"
 
 //attractionAdded
 const eventHub = document.querySelector(".container")
+let workingItinerariesArray=[]
 
+export const useWorkingIteneraries = () => workingItinerariesArray.slice();
 
 //to put selections in working aside
 export const dispatchWorkingItinerary = () => {
-  let workingItinerariesArray=[]
+
   const contentTarget = document.querySelector(".workingItineraries")
 
   eventHub.addEventListener("attractionAdded", e => {

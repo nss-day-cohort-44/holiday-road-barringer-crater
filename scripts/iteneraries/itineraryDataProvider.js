@@ -1,4 +1,5 @@
 import { readableObjects } from "./SavedIteneraries.js";
+import { useWorkingIteneraries } from "./workingItinerary.js";
 
 // Empty array to eventually store the objects from the local api
 let savedItineraries = []
@@ -27,14 +28,7 @@ export const saveItinerary = (itenObj) => {
 
 eventHub.addEventListener("click", e => {
     if(e.target.id === "itinerarySave" && e.target.classList.contains("buttonSelectable")) {
-        const parkId = document.querySelector("#tripDropDown__parks").value;
-        const attractionIds = parseInt(document.querySelector("#tripDropDown__attractions").value);
-        const eateryId = parseInt(document.querySelector("#tripDropDown__eatery").value);
-
-        saveItinerary( {
-            parkId,
-            attractionIds,
-            eateryId
-        });
+        
+        saveItinerary(useWorkingIteneraries());
     }
-});
+})
