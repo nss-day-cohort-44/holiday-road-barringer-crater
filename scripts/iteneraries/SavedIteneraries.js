@@ -10,11 +10,19 @@ const render = (itineraryArr) => {
 
     let containerHTML = "";
     for (const itinerary of itineraryArr) {
+        let attractionsString = ""
+        let eateriesString = ""
+        for (const attractionObj of itinerary.attractions) {
+            attractionsString += `<p>${attractionObj.name}</p>`
+        }
+        for (const eateryObj of itinerary.eateries) {
+            eateriesString += `<p>${eateryObj.businessName}</p>`
+        }
         containerHTML += `
         <div class="savedItineraryCard">
         <h2>${itinerary.park.fullName}</h2>
-        <p>${itinerary.attraction.name}</p>
-        <p>${itinerary.eatery.businessName}</p>
+        <p>Attractions:${attractionsString}</p>
+        <p>Eateries:${eateriesString}</p>
         </div>
         `
     }
@@ -31,32 +39,36 @@ export const readableObjects = () => {
         .then(() => {
             const ObjectsArr = []
             const parksArr = useParks()
-            console.log("parks", parksArr)
+            // console.log("parks", parksArr)
             const savedItineraries = useItineraries()
-            console.log("itineraries: ", savedItineraries)
+            // console.log("itineraries: ", savedItineraries)
             const attractionsArr = useAttractions()
-            console.log("attractions", attractionsArr)
+            // console.log("attractions", attractionsArr)
             const eateryArr = useEateries()
-            const attractionsChosen = () => {
-                let attractions = []
-                let eateries = []
-                for (const itinerary of savedItineraries) {
-                   attractions = itinerary.filter(io => io.type === "attraction")
-                   eateries = itinerary.filter(io => io.type === "eatery")
-                   
-                }
-                return attractions
-            }
-            const chosenAttraction = attractionsChosen()
-            console.log("chosen attraction: ", chosenAttraction)
             // console.log("eateries: ", eateryArr)
-            // for (const itinerary of savedItineraries) {
-            //     ObjectsArr.push({
-            //         park: parksArr.find(parkObj => parkObj.id === itinerary.parkId),
-            //         attraction: attractionsArr.find(attractionObj => attractionObj.id === parseInt(itinerary.attractionIds)),
-            //         eatery: eateryArr.find(eateryObj => eateryObj.id === parseInt(itinerary.eateryId))
-            //     })
-            // }
-            // render(ObjectsArr)
+            for (const savedItinerary of savedItineraries) {
+                const attractionObjects = []
+                const eateryObjects = []
+                const selectedAttractions = savedItinerary.itenerary.filter(attraction => attraction.type === "attraction")
+                console.log("selected attractions", selectedAttractions)
+                console.log("T or F", Array.isArray(selectedAttractions))
+                for (const attraction of selectedAttractions) {
+                    attractionObjects.push(attractionsArr.find(ao => ao.id === parseInt(attraction.id)))
+                }
+                
+                console.log("attractionObjects: ", attractionObjects)
+                const selectedEateries = savedItinerary.itenerary.filter(eatery => eatery.type === "eatery")
+                console.log("eateries selected", selectedEateries)
+                for (const eatery of selectedEateries) {
+                    eateryObjects.push(eateryArr.find(eateryObj => eateryObj.id === parseInt(eatery.id)))
+                }
+                const selectedPark = savedItinerary.itenerary.find(park => park.type === "park")
+                ObjectsArr.push({
+                    park: parksArr.find(parkObj => parkObj.id === selectedPark.id),
+                    attractions: attractionObjects,
+                    eateries: eateryObjects
+                })
+            }
+            render(ObjectsArr)
         })
 }
