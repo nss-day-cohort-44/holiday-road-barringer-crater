@@ -3,7 +3,8 @@ html {
     /* color: #555; */
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 16px;
+    overflow: scroll;
     scroll-behavior: smooth;
 }
 
@@ -30,7 +31,7 @@ h1 {
 }
 
 h2 {
-    font-size: 16px;
+    font-size: 25px;
 }
 
 .headingh2 {
@@ -40,9 +41,11 @@ h2 {
 }
 
 .tripDropDown{
+    
     display:flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 35px 0px;
+    padding: 50px 5px 35px 5px;
     background-color: rgb(0, 24, 24);
     /* background-color: #393b44; */
     
@@ -83,22 +86,29 @@ body {
 .selectedItems {
     display: flex;
     background-color: rgb(235, 235, 235);
+    min-width: 100%;
 
 }
 .selectedItemCard{
     min-width: 33%;
     min-height: 400px;
     border: 1px solid black;
+    /* padding: 0 20px 10px 8px; */
+    
+    /* transition: outline 0.6s linear;
+    margin: 0.5em; */
 }
 .selectedItemCard:hover{
-    
+        /* outline-width: 5px;  */
         position: relative;
         bottom: 5px;
         box-shadow: 0 10px 5px rgb(0, 24, 24);
-        
-        
-        
-    
+}
+
+.parkContent,
+.eateryContent,
+.attractionContent {
+    padding: 10px 15px;
 }
 
 
@@ -120,7 +130,7 @@ h2{
 .savedItineraryCard{
     flex-basis: 30%;
     border: 1px solid black;
-    padding: 0 3px 0 3px;
+    /* padding: 0 3px 0 3px; */
     
 }
 
@@ -197,14 +207,13 @@ h2{
     padding: 10px 30px;
     margin: 10px;
 }
-<<<<<<< HEAD
 
 footer {
     text-align: center;
     font-size: small;
     padding: 20px 0;
-=======
+}
+
 .weatherPicture{
     width: 30px;
->>>>>>> master
 }
