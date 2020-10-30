@@ -38,10 +38,14 @@ export const readableObjects = () => {
             console.log("attractions", attractionsArr)
             const eateryArr = useEateries()
             const attractionsChosen = () => {
+                let attractions = []
+                let eateries = []
                 for (const itinerary of savedItineraries) {
-                   const attractions = itinerary.filter(io => io.type === "attraction")
-                   return attractions
+                   attractions = itinerary.filter(io => io.type === "attraction")
+                   eateries = itinerary.filter(io => io.type === "eatery")
+                   
                 }
+                return attractions
             }
             const chosenAttraction = attractionsChosen()
             console.log("chosen attraction: ", chosenAttraction)
@@ -53,6 +57,6 @@ export const readableObjects = () => {
             //         eatery: eateryArr.find(eateryObj => eateryObj.id === parseInt(itinerary.eateryId))
             //     })
             // }
-            render(ObjectsArr)
+            // render(ObjectsArr)
         })
 }
