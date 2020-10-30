@@ -47,6 +47,18 @@
       "attractionIds": 47,
       "eateryId": 27,
       "id": 8
+    },
+    {
+      "parkId": "7FF37F14-88C8-469E-A447-ACE6D9AF44D2",
+      "attractionIds": 38,
+      "eateryId": 28,
+      "id": 9
+    },
+    {
+      "parkId": "3B8307B3-54AB-4E5F-ACBC-8DECB98AD5F1",
+      "attractionIds": 20,
+      "eateryId": 20,
+      "id": 10
     }
   ]
 }
