@@ -1,14 +1,14 @@
-const contentTarget=document.querySelector(".container")
-const eventHub=document.querySelector(".container")
+const contentTarget = document.querySelector(".container")
+const eventHub = document.querySelector(".container")
 
-export const homePageList=()=>{
+export const homePageList = () => {
     // display the roster
-    const homePageHTML=render()
-    contentTarget.innerHTML=homePageHTML  
-    
+    const homePageHTML = render()
+    contentTarget.innerHTML = homePageHTML
+
 }
 
-const render=()=>{
+const render = () => {
     return `
     <section class="tripDropDown">
     <select class="tripDropDown__Select" id="tripDropDown__parks">
@@ -43,16 +43,24 @@ const render=()=>{
                 </div>
             </article>
           </section> <!--closes selected Items  -->
-          <button id="itinerarySave" class="buttonUnselectable">Save Itinerary</button>
+          <div class="buttonBar">
+            <button id="itinerarySave" class="buttonUnselectable">Save Itinerary</button>
+            <button id="attractionAdd" class="buttonUnselectable">Add Attraction</button>
+            <button id="eateryAdd" class="buttonUnselectable">Add Eatery</button>
+          </div>
      </section>  <!--closes preview Itinerary -->
+     <aside class="workingItineraries">
+              Working itinerary will go here
+     </aside>
+    </section>
      <aside class="savedItineraries">
-              Saved itineraries will go here
+             
     </aside>
- </section>
+ 
 
     `
 }
-export const importStuff=()=>{
-    
+export const importStuff = () => {
+
 
 }
