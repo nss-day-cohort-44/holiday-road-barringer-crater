@@ -33,9 +33,10 @@ export const dispatchWeather = () => {
         for (let i = 0; i < weatherIconArray.length; i++) {
             // console.log("weather Object",weatherObj.weather)
             // console.log("Weather Icon",weatherIconArray[i].type)
+            let roundedTemperature=Math.floor(weatherObj.temperature)
             if (weatherObj.weather === weatherIconArray[i].type) {
                 // console.log("match")
-                weatherHTML = `<p>Temp:${weatherObj.temperature}° Condition: <img class=weatherPicture src=${weatherIconArray[i].image}></p>`
+                weatherHTML = `<p>Temp:${roundedTemperature}° Condition: <img class=weatherPicture src=${weatherIconArray[i].image}></p>`
             }
         }
         return weatherHTML
