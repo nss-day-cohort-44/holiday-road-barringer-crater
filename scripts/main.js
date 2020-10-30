@@ -15,6 +15,8 @@ import {  dispatchItineraryListener } from "./iteneraries/itineraryListener.js";
 import "./iteneraries/SavedIteneraries.js"
 import { readableObjects } from "./iteneraries/SavedIteneraries.js";
 import { dispatchWorkingItinerary } from "./iteneraries/workingItinerary.js"
+import { dispatchDirectionsProvider } from "./directions/DirectionProvider.js"
+
 homePageList()
 dispatchAttractionSelect()
 dispatchParkSelect()
@@ -34,3 +36,5 @@ dispatchWeather()
 dispatchItineraryListener()
 readableObjects();
 dispatchWorkingItinerary()
+
+dispatchDirectionsProvider();
