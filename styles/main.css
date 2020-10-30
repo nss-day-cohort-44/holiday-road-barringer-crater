@@ -29,6 +29,10 @@ h1 {
     letter-spacing: 2px;
 }
 
+h2 {
+    font-size: 16px;
+}
+
 .headingh2 {
     font-weight: 300;
     font-style: italic;
