@@ -38,3 +38,18 @@ export const getWeather = (zipcode) => {
 
 // array.address.city
 
+export const weatherIconArray = [
+    {
+        type: "Clouds",
+        image: "https://cdn3.iconfinder.com/data/icons/tiny-weather-1/512/cloudy-256.png"
+    },
+    {
+        type: "Clear",
+        image: "https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-01-512.png"
+    },
+    {
+        type:"Rain",
+        image:"https://cdn3.iconfinder.com/data/icons/tiny-weather-1/512/rain-256.png"
+    }
+
+]
