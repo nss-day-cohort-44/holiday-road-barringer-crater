@@ -56,7 +56,8 @@ const render = () => {
      <aside class="savedItineraries">
              
     </aside>
- 
+    <footer>© Barringer Crater, Inc. All rights reserved.</footer>
+
 
     `
 }
