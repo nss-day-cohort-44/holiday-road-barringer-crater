@@ -24,6 +24,10 @@ eventHub.addEventListener("chosenAttraction", event => {
         const attractionArray = useAttractions()
         const chosenAttraction = attractionArray.find(attractionObj => attractionObj.id === attractionId)
         attractionCardHtml(chosenAttraction)
+        //create buttons if selected and not selected and add class name to make css work
+        document.querySelector("#attractionAdd").className = "buttonSelectable"
+    } else {
+        document.querySelector("#attractionAdd").className = "buttonUnselectable"
     }
 })
 
@@ -38,6 +42,15 @@ eventHub.addEventListener("click", clickEvent => {
             }
         })
         eventHub.dispatchEvent(detailBtnClicked)
+//Create else if add button
+    } else if(clickEvent.target.id === "attractionAdd") {
+        //console.log("it was clicked")
+        const addAttractionBtnClicked = new CustomEvent("attractionAdded", {
+            detail: {
+                attractionId: parseInt(attractionId)
+            }
+        })
     }
 })
 }
+
