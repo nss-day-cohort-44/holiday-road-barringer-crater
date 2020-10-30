@@ -56,10 +56,17 @@ export const dispatchWorkingItinerary = () => {
       `
         <h3>${currentPark.name}</h3>
       `
+      // this makes sure that only one park can be on the list
+      for (let i=0;i<workingItinerariesArray.length;i++){
+        if (workingItinerariesArray[i].type==="park"){
+          workingItinerariesArray.splice([i],1)
+        }
+      }
       workingItinerariesArray.push({
         id:currentPark.id,
         type:"park"
       })
+      console.log(workingItinerariesArray)
     }
   })
 } //ends export
