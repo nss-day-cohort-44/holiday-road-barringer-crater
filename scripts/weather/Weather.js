@@ -16,7 +16,7 @@ export const dispatchWeather = () => {
                     // gets the useWeather function
                     const weatherArray = useWeather()
                     for (const weather of weatherArray) {
-                        console.log(weather)
+                        // console.log(weather)
                         weatherHTMLString += render(weather)
                     }
                     // console.log(weatherHTMLString)
@@ -31,10 +31,10 @@ export const dispatchWeather = () => {
     const render = (weatherObj) => {
         let weatherHTML = ""
         for (let i = 0; i < weatherIconArray.length; i++) {
-            console.log("weather Object",weatherObj.weather)
-            console.log("Weather Icon",weatherIconArray[i].type)
+            // console.log("weather Object",weatherObj.weather)
+            // console.log("Weather Icon",weatherIconArray[i].type)
             if (weatherObj.weather === weatherIconArray[i].type) {
-                console.log("match")
+                // console.log("match")
                 weatherHTML = `<p>Temp:${weatherObj.temperature}° Condition: <img class=weatherPicture src=${weatherIconArray[i].image}></p>`
             }
         }
