@@ -13,12 +13,12 @@ header{
     background-image:  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.80)), url("https://images.unsplash.com/photo-1570793005299-c091be91bbad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60");
     background-size: cover;
     background-position: center; 
-    height: 20em;
+    height: 15em;
     background-attachment: fixed;
     /* //background-position: 100% 40%; */
     text-align: left;
     color: white;
-    padding: 300px 0 0 120px;
+    padding: 200px 0 150px 120px;
     
 }
 
@@ -105,7 +105,14 @@ body {
 }
 .savedItineraryCard{
     flex-basis: 30%;
-border: 1px solid black;
+    border: 1px solid black;
+    padding: 0 3px 0 3px;
+    
+}
+
+.savedItineraryCard > h2{
+    justify-content: center;
+    
 }
 
 /* .parkContent {
@@ -115,7 +122,7 @@ border: 1px solid black;
 
 .savedItineraries {
     flex: 1;
-    background-color: #8d93ab;
+    background-color: #bdc1d0;
 
 }
 
@@ -154,7 +161,7 @@ border: 1px solid black;
     padding: 10px 30px 10px 30px;
     text-decoration: none;
     border-radius: 10px;
-    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.5s, border 0.2s, color 0.2s;
     color: white;
     border: 1px solid #fff;
     background-color: #666d8c;   
@@ -166,7 +173,7 @@ border: 1px solid black;
     padding: 10px 30px 10px 30px;
     text-decoration: none;
     border-radius: 10px;
-    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.5s, border 0.2s, color 0.2s;
     color: white;
     border: 1px solid #fff;
     background-color: #bababa;   

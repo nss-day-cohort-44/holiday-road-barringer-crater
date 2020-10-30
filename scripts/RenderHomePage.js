@@ -10,7 +10,7 @@ export const homePageList = () => {
 
 const render = () => {
     return `
-    <section class="tripDropDown">
+    <section class="tripDropDown" id="planAnchor">
     <select class="tripDropDown__Select" id="tripDropDown__parks">
         <option value="0">Select a national park</option>
         <option value="1">Cool park</option>
@@ -24,7 +24,7 @@ const render = () => {
         <option value="1">Cool eatery</option>
     </select>
  </section> <!--closes the trip drop down section -->
- <section class="itinerary" id="planAnchor">
+ <section class="itinerary">
      <section class="previewItinerary">
          <section class="selectedItems">
             <article class="selectedItemCard" id="parkCard">
