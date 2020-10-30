@@ -5,16 +5,16 @@ import { getAttractions, useAttractions } from "../attractions/AttractionProvide
 //export const dispatchSavedItineraries=()=>{
 
 // Takes an object and makes it html readable
-const render = (iteneraryArr) => {
+const render = (itineraryArr) => {
     const contentContainer = document.querySelector(".savedItineraries")
 
     let containerHTML = "";
-    for(const intenerary of iteneraryArr) {
+    for (const itinerary of itineraryArr) {
         containerHTML += `
         <div class="savedItineraryCard">
-        <h2>${intenerary.park.fullName}</h2>
-        <p>${intenerary.attraction.name}</p>
-        <p>${intenerary.eatery.businessName}</p>
+        <h2>${itinerary.park.fullName}</h2>
+        <p>${itinerary.attraction.name}</p>
+        <p>${itinerary.eatery.businessName}</p>
         </div>
         `
     }
@@ -31,20 +31,28 @@ export const readableObjects = () => {
         .then(() => {
             const ObjectsArr = []
             const parksArr = useParks()
-            // console.log("parks", parksArr)
+            console.log("parks", parksArr)
             const savedItineraries = useItineraries()
             console.log("itineraries: ", savedItineraries)
             const attractionsArr = useAttractions()
-            // console.log("attractions", attractionsArr)
+            console.log("attractions", attractionsArr)
             const eateryArr = useEateries()
-            // console.log("eateries: ", eateryArr)
-            for (const itinerary of savedItineraries) {
-                ObjectsArr.push({
-                    park: parksArr.find(parkObj => parkObj.id === itinerary.parkId),
-                    attraction: attractionsArr.find(attractionObj => attractionObj.id === parseInt(itinerary.attractionIds)),
-                    eatery: eateryArr.find(eateryObj => eateryObj.id === parseInt(itinerary.eateryId))
-                })
+            const attractionsChosen = () => {
+                for (const itinerary of savedItineraries) {
+                   const attractions = itinerary.filter(io => io.type === "attraction")
+                   return attractions
+                }
             }
-                render(ObjectsArr)
+            const chosenAttraction = attractionsChosen()
+            console.log("chosen attraction: ", chosenAttraction)
+            // console.log("eateries: ", eateryArr)
+            // for (const itinerary of savedItineraries) {
+            //     ObjectsArr.push({
+            //         park: parksArr.find(parkObj => parkObj.id === itinerary.parkId),
+            //         attraction: attractionsArr.find(attractionObj => attractionObj.id === parseInt(itinerary.attractionIds)),
+            //         eatery: eateryArr.find(eateryObj => eateryObj.id === parseInt(itinerary.eateryId))
+            //     })
+            // }
+            render(ObjectsArr)
         })
 }
