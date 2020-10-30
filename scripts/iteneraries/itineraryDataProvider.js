@@ -28,7 +28,9 @@ export const saveItinerary = (itenObj) => {
 
 eventHub.addEventListener("click", e => {
     if(e.target.id === "itinerarySave" && e.target.classList.contains("buttonSelectable")) {
-        
-        saveItinerary(useWorkingIteneraries());
+        const itenObj = {
+            itenerary: useWorkingIteneraries()
+        }
+        saveItinerary(itenObj);
     }
 })

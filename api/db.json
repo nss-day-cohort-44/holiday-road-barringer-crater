@@ -1,60 +1,46 @@
 {
   "itineraries": [
-    [
-      {
-        "id": 5,
-        "type": "attraction"
-      },
-      {
-        "id": 5,
-        "type": "attraction"
-      },
-      {
-        "id": 7,
-        "type": "eatery"
-      },
-      {
-        "id": 7,
-        "type": "eatery"
-      },
-      {
-        "id": 7,
-        "type": "eatery"
-      },
-      {
-        "id": 7,
-        "type": "eatery"
-      }
-    ],
-    [
-      {
-        "id": 22,
-        "type": "eatery"
-      },
-      {
-        "id": 4,
-        "type": "attraction"
-      },
-      {
-        "id": 20,
-        "type": "eatery"
-      },
-      {
-        "id": 27,
-        "type": "eatery"
-      },
-      {
-        "id": 3,
-        "type": "attraction"
-      },
-      {
-        "id": 31,
-        "type": "eatery"
-      },
-      {
-        "id": 18,
-        "type": "attraction"
-      }
-    ]
+    {
+      "itenerary": [
+        {
+          "id": 6,
+          "type": "attraction"
+        },
+        {
+          "id": 25,
+          "type": "eatery"
+        },
+        {
+          "id": 25,
+          "type": "eatery"
+        },
+        {
+          "id": 6,
+          "type": "attraction"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "itenerary": [
+        {
+          "id": 6,
+          "type": "attraction"
+        },
+        {
+          "id": 25,
+          "type": "eatery"
+        },
+        {
+          "id": 25,
+          "type": "eatery"
+        },
+        {
+          "id": 6,
+          "type": "attraction"
+        }
+      ],
+      "id": 2
+    }
   ]
 }
