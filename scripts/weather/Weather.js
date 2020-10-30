@@ -7,7 +7,7 @@ const eventHub = document.querySelector(".container")
 eventHub.addEventListener("chosenPark", e => {
     if(e.detail.chosenPark !== "0"){
     // finds the park city 
-    const park = useParks().find(park => park.id === e.detail.chosenPark).addresses[0].city
+    const park = useParks().find(park => park.id === e.detail.chosenPark).addresses[0].postalCode
     getWeather(park)
         .then(() => {
             // find the place to display the weather
@@ -18,7 +18,7 @@ eventHub.addEventListener("chosenPark", e => {
             for (const weather of weatherArray) {
                 weatherHTMLString += render(weather)
             }
-            console.log(weatherHTMLString)
+            // console.log(weatherHTMLString)
             contentTarget.innerHTML = `<p>5 Day Forecast</p>${weatherHTMLString}`
         })
     }

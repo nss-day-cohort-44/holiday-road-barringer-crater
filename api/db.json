@@ -41,6 +41,12 @@
       "attractionIds": 8,
       "eateryId": 20,
       "id": 7
+    },
+    {
+      "parkId": "712044CE-4C85-48C2-813E-310A9C6C74E1",
+      "attractionIds": 47,
+      "eateryId": 27,
+      "id": 8
     }
   ]
 }
