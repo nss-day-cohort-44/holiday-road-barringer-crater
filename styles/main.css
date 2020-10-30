@@ -37,7 +37,7 @@ h1 {
 .tripDropDown{
     display:flex;
     justify-content: space-evenly;
-    padding: 60px 0px;
+    padding: 35px 0px;
     background-color: rgb(0, 24, 24);
     /* background-color: #393b44; */
     
@@ -77,7 +77,7 @@ body {
 
 .selectedItems {
     display: flex;
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(235, 235, 235);
 
 }
 .selectedItemCard{
@@ -134,7 +134,7 @@ h2{
 .buttonBar {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(0, 24, 24);
+    background-color: rgb(213, 213, 213);
     
     
 }
