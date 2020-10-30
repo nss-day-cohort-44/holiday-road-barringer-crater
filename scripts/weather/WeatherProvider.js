@@ -39,8 +39,8 @@ export const useWeather = () => {
 
 
 
-export const getWeather = (city) => {
-    return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${keys.weatherKey}`)
+export const getWeather = (zipcode) => {
+    return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${zipcode}&appid=${keys.weatherKey}`)
     .then(response => response.json())
     .then(parsedResponse => {
         weather = parsedResponse;
