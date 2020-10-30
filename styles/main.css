@@ -197,9 +197,14 @@ h2{
     padding: 10px 30px;
     margin: 10px;
 }
+<<<<<<< HEAD
 
 footer {
     text-align: center;
     font-size: small;
     padding: 20px 0;
+=======
+.weatherPicture{
+    width: 30px;
+>>>>>>> master
 }
