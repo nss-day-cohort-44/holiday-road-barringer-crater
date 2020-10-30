@@ -17,8 +17,8 @@ export const dispatchWorkingItinerary = () => {
       contentTarget.innerHTML += `
         <h3>${currentAttraction.name}</h3>
       `
-    }
-  })
+    }//ends if
+  })//ends eventHub
 } //ends export
 
 //parksArr.find(parkObj => parkObj.id === itinerary.parkId)
