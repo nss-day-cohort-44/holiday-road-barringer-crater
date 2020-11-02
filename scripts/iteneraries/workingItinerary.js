@@ -26,7 +26,7 @@ export const dispatchWorkingItinerary = () => {
         id:currentAttraction.id,
         type:"attraction"
       })
-      console.log(workingItinerariesArray)
+      // console.log(workingItinerariesArray)
     }
     //ends if
   })//ends eventHub
@@ -68,7 +68,7 @@ export const dispatchWorkingItinerary = () => {
         id:currentPark.id,
         type:"park"
       })
-      console.log(workingItinerariesArray)
+      // console.log(workingItinerariesArray)
     }
   })
 } //ends export
