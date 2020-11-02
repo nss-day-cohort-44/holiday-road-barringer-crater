@@ -107,7 +107,9 @@ body {
 
 .parkContent,
 .eateryContent,
-.attractionContent {
+.attractionContent,
+.workingItineraries,
+.savedItineraryCard {
     padding: 10px 15px;
 }
 

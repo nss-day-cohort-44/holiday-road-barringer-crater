@@ -2,9 +2,25 @@ import { useAttractions } from "../attractions/AttractionProvider.js"
 import { useEateries } from "../eateries/EateryProvider.js"
 import { useParks } from "../parks/ParkProvider.js"
 
+let parkButtonClassAdded = false
+let eateryButtonClassAdded = false
+let attractionButtonClassAdded = false
+
 //attractionAdded
 const eventHub = document.querySelector(".container")
 let workingItinerariesArray=[]
+
+export const setParkButtonClassAdded = (bool) => {
+  parkButtonClassAdded = bool;
+}
+
+export const setEateryButtonClassAdded = (bool) => {
+  eateryButtonClassAdded = bool;
+}
+
+export const setAttractionButtonClassAdded = (bool) => {
+  attractionButtonClassAdded = bool;
+}
 
 export const useWorkingIteneraries = () => workingItinerariesArray.slice();
 
@@ -16,15 +32,14 @@ export const dispatchWorkingItinerary = () => {
   eventHub.addEventListener("attractionAdded", e => {
     
     if (e.detail.attractionId !== 0) {
+      console.log("attractionsAdded");
       const attractionsArray = useAttractions()
-    
     const currentAttraction = attractionsArray.find(attractionObj => attractionObj.id === e.detail.attractionId)
       contentTarget.innerHTML += `
         <h3>${currentAttraction.name}</h3>
       `
       workingItinerariesArray.push({
         id:currentAttraction.id,
-        type:"attraction"
       })
       // console.log(workingItinerariesArray)
     }
@@ -34,7 +49,6 @@ export const dispatchWorkingItinerary = () => {
     // console.log("hi")
     if (e.detail.eateryId !==0) {
       const eateriesArray=useEateries()
-      
       const currentEatery=eateriesArray.find(eateryObj => eateryObj.id=== e.detail.eateryId)
       contentTarget.innerHTML+=
       `
@@ -42,7 +56,6 @@ export const dispatchWorkingItinerary = () => {
       `
       workingItinerariesArray.push({
         id:currentEatery.id,
-        type:"eatery"
       })
     }
     
@@ -52,7 +65,6 @@ export const dispatchWorkingItinerary = () => {
   const parkContentTarget=document.querySelector(".addedParksHere")
     if (e.detail.parkId !==0) {
       const parksArray=useParks()
-      
       const currentPark=parksArray.find(parkObj => parkObj.id=== e.detail.parkId)
       parkContentTarget.innerHTML=
       `
@@ -66,10 +78,17 @@ export const dispatchWorkingItinerary = () => {
       }
       workingItinerariesArray.push({
         id:currentPark.id,
-        type:"park"
       })
       // console.log(workingItinerariesArray)
     }
   })
 } //ends export
 
+export const checkWorkingItin = () => {
+  console.log(parkButtonClassAdded, eateryButtonClassAdded, attractionButtonClassAdded)
+  if (parkButtonClassAdded && eateryButtonClassAdded && attractionButtonClassAdded) {
+    return true
+  } else {
+    return false
+  }
+}
