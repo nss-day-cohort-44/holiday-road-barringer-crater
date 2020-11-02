@@ -67,6 +67,14 @@ const render = () => {
     <aside class="savedItineraries" id="savedAnchor">
          
     </aside>
+
+    <section class=searchBar>
+    <h3>Find Your Own Way<h3>
+    <p>Search any of our databases to find what you are looking for</p>
+    <input type="text" placeholder="search" id=searchBar>
+    <div class=searchBar__output> Output will be here </div>
+
+    </section>
     <footer>© Barringer Crater, Inc. All rights reserved.</footer>
 
 
