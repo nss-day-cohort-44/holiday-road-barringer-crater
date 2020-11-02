@@ -55,7 +55,6 @@ export const dispatchWorkingItinerary = () => {
       
       workingItineraryEatery.push({
         EateryId:currentEatery.id,
-        itineraryId:counter.id
         
       })
       
