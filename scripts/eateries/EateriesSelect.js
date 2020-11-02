@@ -26,7 +26,8 @@ eventHub.addEventListener("change", (changeEvent) => {
     //console.log("change in dropdown")
     const eatery = new CustomEvent("chosenEatery", {
       detail: {
-        chosenEatery: parseInt(changeEvent.target.value)
+        chosenEatery: parseInt(changeEvent.target.value),
+        type: "eatery"
       }
     })
     console.log(eatery)

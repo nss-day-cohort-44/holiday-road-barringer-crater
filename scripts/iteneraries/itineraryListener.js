@@ -1,10 +1,26 @@
+import { saveItinerary } from "./itineraryDataProvider.js"
+import { useWorkingIteneraries } from "./workingItinerary.js";
+
 const eventHub = document.querySelector(".container");
+
+let parks = "0";
+let eateries = "0";
+let attractions = "0";
 
 export const checkItenerary = (ev) => {
 
-    const eateries = document.querySelector("#tripDropDown__eatery").value;
-    const attractions = document.querySelector("#tripDropDown__attractions").value;
-    const parks = document.querySelector("#tripDropDown__parks").value;
+    switch (ev.detail.type) {
+        case "park":
+            parks = ev.detail.chosenPark;
+            break;
+        case "eatery":
+            eateries = ev.detail.chosenEatery;
+            break;
+        case "attraction":
+            attractions = ev.detail.chosenAttraction;
+            break;
+    }
+
     let e;
 
     if (parks !== "0" && eateries !== "0" && attractions !== "0") {
@@ -27,3 +43,12 @@ export const dispatchItineraryListener = () => {
         document.querySelector("#itinerarySave").className = "buttonUnselectable";
     })
 }
+
+eventHub.addEventListener("click", e => {
+    if(e.target.id === "itinerarySave" && e.target.classList.contains("buttonSelectable")) {
+        const itenObj = {
+            itenerary: useWorkingIteneraries()
+        }
+        saveItinerary(itenObj);
+    }
+})

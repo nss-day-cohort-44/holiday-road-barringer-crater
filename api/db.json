@@ -24,6 +24,73 @@
         }
       ],
       "id": 1
+    },
+    {
+      "itenerary": [
+        {
+          "id": 7,
+          "type": "attraction"
+        },
+        {
+          "id": 21,
+          "type": "eatery"
+        },
+        {
+          "id": 7,
+          "type": "attraction"
+        },
+        {
+          "id": 7,
+          "type": "attraction"
+        },
+        {
+          "id": "1A47416F-DAA3-4137-9F30-14AF86B4E547",
+          "type": "park"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "itenerary": [
+        {
+          "id": "E6E1D22A-7A89-47F8-813C-B611059A8CF9",
+          "type": "park"
+        },
+        {
+          "id": 7,
+          "type": "attraction"
+        },
+        {
+          "id": 8,
+          "type": "eatery"
+        },
+        {
+          "id": 8,
+          "type": "eatery"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "itenerary": [
+        {
+          "id": "E6E1D22A-7A89-47F8-813C-B611059A8CF9",
+          "type": "park"
+        },
+        {
+          "id": 7,
+          "type": "attraction"
+        },
+        {
+          "id": 8,
+          "type": "eatery"
+        },
+        {
+          "id": 8,
+          "type": "eatery"
+        }
+      ],
+      "id": 4
     }
   ]
 }
