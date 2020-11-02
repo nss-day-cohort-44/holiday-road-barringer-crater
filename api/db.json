@@ -1,77 +1,30 @@
 {
   "itineraries": [
     {
-      "itenerary": [
-        {
-          "id": "6DA17C86-088E-4B4D-B862-7C1BD5CF236B",
-          "type": "park"
-        },
-        {
-          "id": 2,
-          "type": "attraction"
-        },
-        {
-          "id": 13,
-          "type": "attraction"
-        },
-        {
-          "id": 8,
-          "type": "eatery"
-        },
-        {
-          "id": 19,
-          "type": "eatery"
-        }
-      ],
-      "id": 1
+      "id": 1,
+      "parkId": "6DA17C86-088E-4B4D-B862-7C1BD5CF236B"
+    }
+  ],
+  "itineraryEatery": [
+    {
+      "id": 1,
+      "itineraryId": 1,
+      "eateryId": 8
     },
     {
-      "itenerary": [
-        {
-          "id": 7,
-          "type": "attraction"
-        },
-        {
-          "id": 21,
-          "type": "eatery"
-        },
-        {
-          "id": 7,
-          "type": "attraction"
-        },
-        {
-          "id": 7,
-          "type": "attraction"
-        },
-        {
-          "id": "1A47416F-DAA3-4137-9F30-14AF86B4E547",
-          "type": "park"
-        }
-      ],
-      "id": 2
+      "id": 1,
+      "itineraryId": 1,
+      "eateryId": 2
+    }
+  ],
+  "itineraryAttraction": [
+    {
+      "id": 1,
+      "itineraryId": 1,
+      "attractionId": 2
     },
     {
-      "itenerary": [
-        {
-          "id": "E6E1D22A-7A89-47F8-813C-B611059A8CF9",
-          "type": "park"
-        },
-        {
-          "id": 7,
-          "type": "attraction"
-        },
-        {
-          "id": 8,
-          "type": "eatery"
-        },
-        {
-          "id": 8,
-          "type": "eatery"
-        }
-      ],
-      "id": 3
-    },
-    {
+<<<<<<< HEAD
       "itenerary": [
         {
           "id": "E6E1D22A-7A89-47F8-813C-B611059A8CF9",
@@ -116,6 +69,11 @@
         }
       ],
       "id": 5
+=======
+      "id": 2,
+      "itineraryId": 1,
+      "attractionId": 13
+>>>>>>> dw-flattening-data
     }
   ]
 }
