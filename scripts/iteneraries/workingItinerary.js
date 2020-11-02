@@ -45,24 +45,13 @@ export const dispatchWorkingItinerary = () => {
       contentTarget.innerHTML += `
         <h3>${currentAttraction.name}</h3>
       `
-<<<<<<< HEAD
-      workingItinerariesArray.push({
-        id:currentAttraction.id,
-        type:"attraction"
-      })
-=======
       
->>>>>>> master
       // pushing the attraction into an array
       workingItineraryAttraction.push({
         attractionId:currentAttraction.id
       })
 
-<<<<<<< HEAD
-      console.log(workingItinerariesArray)
-=======
       console.log(workingItineraryAttraction)
->>>>>>> master
     }
     //ends if
   })//ends eventHub
