@@ -3,6 +3,22 @@
     {
       "id": 1,
       "parkId": "6DA17C86-088E-4B4D-B862-7C1BD5CF236B"
+    },
+    {
+      "parkId": "E6E1D22A-7A89-47F8-813C-B611059A8CF9",
+      "id": 2
+    },
+    {
+      "parkId": "E4C7784E-66A0-4D44-87D0-3E072F5FEF43",
+      "id": 3
+    },
+    {
+      "parkId": "E4C7784E-66A0-4D44-87D0-3E072F5FEF43",
+      "id": 4
+    },
+    {
+      "parkId": "E4C7784E-66A0-4D44-87D0-3E072F5FEF43",
+      "id": 5
     }
   ],
   "itineraryEatery": [
@@ -12,9 +28,29 @@
       "eateryId": 8
     },
     {
-      "id": 1,
+      "id": 2,
       "itineraryId": 1,
       "eateryId": 2
+    },
+    {
+      "EateryId": 19,
+      "itineraryId": 2,
+      "id": 3
+    },
+    {
+      "EateryId": 1,
+      "itineraryId": 3,
+      "id": 4
+    },
+    {
+      "EateryId": 1,
+      "itineraryId": 4,
+      "id": 5
+    },
+    {
+      "EateryId": 1,
+      "itineraryId": 5,
+      "id": 6
     }
   ],
   "itineraryAttraction": [
@@ -24,6 +60,7 @@
       "attractionId": 2
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "itenerary": [
         {
@@ -43,37 +80,44 @@
           "type": "eatery"
         }
       ],
+=======
+      "id": 2,
+      "itineraryId": 1,
+      "attractionId": 13
+    },
+    {
+      "attractionId": 7,
+      "itineraryId": 2,
+      "id": 3
+    },
+    {
+      "attractionId": 16,
+      "itineraryId": 2,
+>>>>>>> master
       "id": 4
     },
     {
-      "itenerary": [
-        {
-          "id": "1A47416F-DAA3-4137-9F30-14AF86B4E547",
-          "type": "park"
-        },
-        {
-          "id": 8,
-          "type": "attraction"
-        },
-        {
-          "id": 20,
-          "type": "eatery"
-        },
-        {
-          "id": 20,
-          "type": "eatery"
-        },
-        {
-          "id": 8,
-          "type": "attraction"
-        }
-      ],
+      "attractionId": 2,
+      "itineraryId": 3,
       "id": 5
+<<<<<<< HEAD
 =======
       "id": 2,
       "itineraryId": 1,
       "attractionId": 13
 >>>>>>> dw-flattening-data
+=======
+    },
+    {
+      "attractionId": 2,
+      "itineraryId": 4,
+      "id": 6
+    },
+    {
+      "attractionId": 2,
+      "itineraryId": 5,
+      "id": 7
+>>>>>>> master
     }
   ]
 }
