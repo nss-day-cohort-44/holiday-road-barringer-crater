@@ -4,8 +4,8 @@ import { useWorkingIteneraries } from "./workingItinerary.js";
 const eventHub = document.querySelector(".container");
 
 let parks = "0";
-let eateries = "0";
-let attractions = "0";
+let eateries = 0;
+let attractions = 0;
 
 export const checkItenerary = (ev) => {
 
@@ -23,7 +23,7 @@ export const checkItenerary = (ev) => {
 
     let e;
 
-    if (parks !== "0" && eateries !== "0" && attractions !== "0") {
+    if (parks !== "0" && eateries !== 0 && attractions !== 0) {
         e = new CustomEvent("itenerarySelected");
     } else {
         e = new CustomEvent("iteneraryUnselected");
