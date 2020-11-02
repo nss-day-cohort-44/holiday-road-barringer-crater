@@ -3,13 +3,32 @@ import { useEateries } from "../eateries/EateryProvider.js"
 import { useParks } from "../parks/ParkProvider.js"
 import { getItineraries, useItineraries } from "./itineraryDataProvider.js"
 
+let parkButtonClassAdded = false
+let eateryButtonClassAdded = false
+let attractionButtonClassAdded = false
+
 //attractionAdded
 const eventHub = document.querySelector(".container")
  let workingItinerariesArray=[]
  let workingItineraryEatery=[]
  let workingItineraryAttraction=[]
 
+<<<<<<< HEAD
 export const useWorkingAttractions= () => workingItineraryAttraction.slice()
+=======
+export const setParkButtonClassAdded = (bool) => {
+  parkButtonClassAdded = bool;
+}
+
+export const setEateryButtonClassAdded = (bool) => {
+  eateryButtonClassAdded = bool;
+}
+
+export const setAttractionButtonClassAdded = (bool) => {
+  attractionButtonClassAdded = bool;
+}
+
+>>>>>>> master
 export const useWorkingIteneraries = () => workingItinerariesArray.slice();
 export const useWorkingEateries= () => workingItineraryEatery.slice()
 
@@ -23,8 +42,8 @@ export const dispatchWorkingItinerary = () => {
   eventHub.addEventListener("attractionAdded", e => {
     
     if (e.detail.attractionId !== 0) {
+      console.log("attractionsAdded");
       const attractionsArray = useAttractions()
-    
     const currentAttraction = attractionsArray.find(attractionObj => attractionObj.id === e.detail.attractionId)
       contentTarget.innerHTML += `
         <h3>${currentAttraction.name}</h3>
@@ -43,7 +62,6 @@ export const dispatchWorkingItinerary = () => {
     // console.log("hi")
     if (e.detail.eateryId !==0) {
       const eateriesArray=useEateries()
-      
       const currentEatery=eateriesArray.find(eateryObj => eateryObj.id=== e.detail.eateryId)
       contentTarget.innerHTML+=
       `
@@ -65,7 +83,6 @@ export const dispatchWorkingItinerary = () => {
   const parkContentTarget=document.querySelector(".addedParksHere")
     if (e.detail.parkId !==0) {
       const parksArray=useParks()
-      
       const currentPark=parksArray.find(parkObj => parkObj.id=== e.detail.parkId)
       parkContentTarget.innerHTML=
       `
@@ -81,8 +98,16 @@ export const dispatchWorkingItinerary = () => {
       workingItinerariesArray.push({
         parkId:currentPark.id,
       })
-      console.log(workingItinerariesArray)
+      // console.log(workingItinerariesArray)
     }
   })
 } //ends export
 
+export const checkWorkingItin = () => {
+  console.log(parkButtonClassAdded, eateryButtonClassAdded, attractionButtonClassAdded)
+  if (parkButtonClassAdded && eateryButtonClassAdded && attractionButtonClassAdded) {
+    return true
+  } else {
+    return false
+  }
+}
