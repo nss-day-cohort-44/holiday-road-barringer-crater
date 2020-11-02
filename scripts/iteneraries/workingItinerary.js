@@ -4,12 +4,13 @@ import { useParks } from "../parks/ParkProvider.js"
 
 //attractionAdded
 const eventHub = document.querySelector(".container")
-let workingItinerariesArray=[]
-let workingItineraryEatery=[]
-let workingItineraryAttraction=[]
+ let workingItinerariesArray=[]
+ let workingItineraryEatery=[]
+ let workingItineraryAttraction=[]
 
 export const useWorkingAttractions= () => workingItineraryAttraction.slice()
 export const useWorkingIteneraries = () => workingItinerariesArray.slice();
+export const useWorkingEateries= () => workingItineraryEatery.slice()
 
 //to put selections in working aside
 export const dispatchWorkingItinerary = () => {
@@ -25,16 +26,16 @@ export const dispatchWorkingItinerary = () => {
       contentTarget.innerHTML += `
         <h3>${currentAttraction.name}</h3>
       `
-      workingItinerariesArray.push({
-        id:currentAttraction.id,
-        type:"attraction"
-      })
+      // workingItinerariesArray.push({
+      //   id:currentAttraction.id,
+      //   type:"attraction"
+      // })
       // pushing the attraction into an array
       workingItineraryAttraction.push({
-        attractionId:currentAttraction
+        attractionId:currentAttraction.id
       })
 
-      console.log(workingItinerariesArray)
+      console.log(workingItineraryAttraction)
     }
     //ends if
   })//ends eventHub
@@ -48,9 +49,13 @@ export const dispatchWorkingItinerary = () => {
       `
         <h3>${currentEatery.businessName}</h3>
       `
-      workingItinerariesArray.push({
-        id:currentEatery.id,
-        type:"eatery"
+      // workingItinerariesArray.push({
+      //   id:currentEatery.id,
+      //   type:"eatery"
+      // })
+      // create a new array of just the eateries
+      workingItineraryEatery.push({
+        EateryId:currentEatery.id
       })
     }
     
@@ -73,8 +78,8 @@ export const dispatchWorkingItinerary = () => {
         }
       }
       workingItinerariesArray.push({
-        id:currentPark.id,
-        type:"park"
+        parkId:currentPark.id,
+        // type:"park"
       })
       console.log(workingItinerariesArray)
     }

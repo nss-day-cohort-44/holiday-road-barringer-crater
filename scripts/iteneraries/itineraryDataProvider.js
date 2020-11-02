@@ -62,20 +62,8 @@ export const saveItineraryEatery = (itinObj) => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(itinObj)
-    })
-    
+    })   
 }
 
 
 
-eventHub.addEventListener("click", e => {
-    if (e.target.id === "itinerarySave" && e.target.classList.contains("buttonSelectable")) {
-        const itineraryObj = {
-            testing: "Is this going to push?"
-        }
-
-        saveItinerary(itineraryObj);
-        saveItineraryAttraction(itineraryObj)
-        saveItineraryEatery(itineraryObj)
-    }
-})
