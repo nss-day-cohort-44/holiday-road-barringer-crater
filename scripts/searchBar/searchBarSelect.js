@@ -6,18 +6,20 @@ export const dispatchSearchBarSelect=()=>{
     document.querySelector("#searchBar")
     .addEventListener("keypress", keyPressEvent => {
         if (keyPressEvent.charCode === 13) {
-           const itineraryArray = useAttractions()
-            console.log(itineraryArray)
-            const foundObject = itineraryArray.find(searchedItem => searchedItem.name.includes(keyPressEvent.target.value))
+            const searchFunction=()=>{
+            const attractionArray = useAttractions()    
+            let foundItem = attractionArray.find(searchedItem => searchedItem.description.includes(keyPressEvent.target.value))
+            return foundItem
+            }
 
+            let foundItemToHTML=searchFunction()
+            
             contentTarget.innerHTML = `
 
-                <p>${foundObject.name}</p>
+                <p>${foundItemToHTML.name}</p>
                 
             `;
         }
     });
    
-
-
 }
