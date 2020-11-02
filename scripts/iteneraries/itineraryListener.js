@@ -12,16 +12,16 @@ export const checkItenerary = (ev) => {
 
     switch (ev.detail.type) {
         case "park":
-            parks = ev.detail.chosenPark;
+            parks = ev.detail.parkId;
             break;
         case "eatery":
-            eateries = ev.detail.chosenEatery;
+            eateries = ev.detail.eateryId;
             break;
         case "attraction":
-            attractions = ev.detail.chosenAttraction;
+            attractions = ev.detail.attractionId;
             break;
     }
-
+        console.log("here is what we look 4",parks, eateries, attractions)
     let e;
 
     if (parks !== "0" && eateries !== 0 && attractions !== 0) {
@@ -32,14 +32,17 @@ export const checkItenerary = (ev) => {
     eventHub.dispatchEvent(e);
 }
 export const dispatchItineraryListener = () => {
-    eventHub.addEventListener("chosenPark", checkItenerary);
-    eventHub.addEventListener("chosenEatery", checkItenerary);
-    eventHub.addEventListener("chosenAttraction", checkItenerary);
+    eventHub.addEventListener("ParkAdded", checkItenerary);
+    eventHub.addEventListener("eateryAdded", checkItenerary);
+    eventHub.addEventListener("attractionAdded", checkItenerary);
 
     eventHub.addEventListener("itenerarySelected", e => {
+        console.log("hi")
         if (checkWorkingItin()) {
         document.querySelector("#itinerarySave").className = "buttonSelectable";
+        console.log("hi in if")
         }
+        
     });
 
     eventHub.addEventListener("iteneraryUnselected", e => {

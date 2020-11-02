@@ -33,7 +33,8 @@ eventHub.addEventListener("click", e => {
         const parkId = document.querySelector("#tripDropDown__parks").value 
         const addParkBtnClicked = new CustomEvent("ParkAdded", {
             detail: {
-                parkId: parkId
+                parkId: parkId,
+                type: "park"
             }
         })
         // console.log("Does this work?",addParkBtnClicked)

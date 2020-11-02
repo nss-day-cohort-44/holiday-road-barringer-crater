@@ -54,11 +54,12 @@ eventHub.addEventListener("click", e => {
       eventHub.dispatchEvent(eateryDetailClicked);
   }
   else if(e.target.id === "eateryAdd") {
-    //console.log("it was clicked")
+    console.log("it was clicked")
     const eateryId = document.querySelector("#tripDropDown__eatery").value 
     const addEateryBtnClicked = new CustomEvent("eateryAdded", {
         detail: {
-            eateryId: parseInt(eateryId)
+            eateryId: parseInt(eateryId),
+            type: "eatery"
         }
     })
     // console.log("Does this work?",addEateryBtnClicked)

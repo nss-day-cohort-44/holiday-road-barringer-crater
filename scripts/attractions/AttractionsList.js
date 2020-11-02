@@ -48,7 +48,8 @@ eventHub.addEventListener("click", clickEvent => {
         const attractionId = document.querySelector("#tripDropDown__attractions").value 
         const addAttractionBtnClicked = new CustomEvent("attractionAdded", {
             detail: {
-                attractionId: parseInt(attractionId)
+                attractionId: parseInt(attractionId),
+                type: "attraction"
             }
         })
         //console.log("add attraction button clicked")

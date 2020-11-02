@@ -1,5 +1,164 @@
 {
   "itineraries": [
-    
+    {
+      "itenerary": [
+        {
+          "id": "307BE169-345D-472C-8128-20F1D59864A7",
+          "type": "park"
+        },
+        {
+          "id": 19,
+          "type": "attraction"
+        },
+        {
+          "id": 37,
+          "type": "eatery"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "itenerary": [
+        {
+          "id": "307BE169-345D-472C-8128-20F1D59864A7",
+          "type": "park"
+        },
+        {
+          "id": 19,
+          "type": "attraction"
+        },
+        {
+          "id": 37,
+          "type": "eatery"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "itenerary": [
+        {
+          "id": "3350C18C-8E07-487B-930E-37AD873D31AD",
+          "type": "park"
+        },
+        {
+          "id": 12,
+          "type": "attraction"
+        },
+        {
+          "id": 24,
+          "type": "eatery"
+        },
+        {
+          "id": 37,
+          "type": "eatery"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "itenerary": [
+        {
+          "id": "3350C18C-8E07-487B-930E-37AD873D31AD",
+          "type": "park"
+        },
+        {
+          "id": 12,
+          "type": "attraction"
+        },
+        {
+          "id": 24,
+          "type": "eatery"
+        },
+        {
+          "id": 37,
+          "type": "eatery"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "itenerary": [
+        {
+          "id": "E28CA30C-2D81-4394-81E9-67677C412115",
+          "type": "park"
+        },
+        {
+          "id": 11,
+          "type": "attraction"
+        },
+        {
+          "id": 25,
+          "type": "eatery"
+        },
+        {
+          "id": 33,
+          "type": "eatery"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "itenerary": [
+        {
+          "id": "E28CA30C-2D81-4394-81E9-67677C412115",
+          "type": "park"
+        },
+        {
+          "id": 11,
+          "type": "attraction"
+        },
+        {
+          "id": 25,
+          "type": "eatery"
+        },
+        {
+          "id": 33,
+          "type": "eatery"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "itenerary": [
+        {
+          "id": "E28CA30C-2D81-4394-81E9-67677C412115",
+          "type": "park"
+        },
+        {
+          "id": 11,
+          "type": "attraction"
+        },
+        {
+          "id": 25,
+          "type": "eatery"
+        },
+        {
+          "id": 33,
+          "type": "eatery"
+        }
+      ],
+      "id": 7
+    },
+    {
+      "itenerary": [
+        {
+          "id": "E28CA30C-2D81-4394-81E9-67677C412115",
+          "type": "park"
+        },
+        {
+          "id": 11,
+          "type": "attraction"
+        },
+        {
+          "id": 25,
+          "type": "eatery"
+        },
+        {
+          "id": 33,
+          "type": "eatery"
+        }
+      ],
+      "id": 8
+    }
   ]
 }
