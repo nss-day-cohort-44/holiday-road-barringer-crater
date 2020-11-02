@@ -3,6 +3,9 @@ import { useWorkingIteneraries } from "./workingItinerary.js";
 
 // Empty array to eventually store the objects from the local api
 let savedItineraries = []
+let savedItineraryEateries=[]
+let savedItineraryAttractions=[]
+
 const eventHub = document.querySelector(".container");
 
 // returns a copy of the savedItineraries array so that the original won't be affected
@@ -15,6 +18,20 @@ export const getItineraries = () => {
     .then(parsedItineraries => savedItineraries = parsedItineraries)
 }
 
+export const getItinerariesEateries=()=>{
+    return fetch("http://localhost:8088/itineraryEatery")
+    .then(response => response.json())
+    .then(parsedItineraries => savedItineraryEateries = parsedItineraries)
+}
+export const getItinerariesAttractions=()=>{
+    return fetch("http://localhost:8088/itineraryAttraction")
+    .then(response => response.json())
+    .then(parsedItineraries => savedItineraryAttractions = parsedItineraries)
+}
+
+
+
+
 export const saveItinerary = (itenObj) => {
 
     return fetch("http://localhost:8088/itineraries", {
@@ -23,7 +40,26 @@ export const saveItinerary = (itenObj) => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(itenObj)
-    }).then(getItineraries).then(readableObjects)
+    }).then(getItineraries)
+    .then( fetch ("http://localhost:8088/itineraryEatery", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(itenObj)
+    })
+    .then(fetch ("http://localhost:8088/itineraryAttraction", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(itenObj)
+    })
+
+    )
+        
+    )
+    .then(readableObjects)
 }
 
 eventHub.addEventListener("click", e => {
