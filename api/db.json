@@ -3,44 +3,27 @@
     {
       "itenerary": [
         {
-          "id": 6,
+          "id": "6DA17C86-088E-4B4D-B862-7C1BD5CF236B",
+          "type": "park"
+        },
+        {
+          "id": 2,
           "type": "attraction"
         },
         {
-          "id": 25,
-          "type": "eatery"
-        },
-        {
-          "id": 25,
-          "type": "eatery"
-        },
-        {
-          "id": 6,
+          "id": 13,
           "type": "attraction"
+        },
+        {
+          "id": 8,
+          "type": "eatery"
+        },
+        {
+          "id": 19,
+          "type": "eatery"
         }
       ],
       "id": 1
-    },
-    {
-      "itenerary": [
-        {
-          "id": 6,
-          "type": "attraction"
-        },
-        {
-          "id": 25,
-          "type": "eatery"
-        },
-        {
-          "id": 25,
-          "type": "eatery"
-        },
-        {
-          "id": 6,
-          "type": "attraction"
-        }
-      ],
-      "id": 2
     }
   ]
 }
