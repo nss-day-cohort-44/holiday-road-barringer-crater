@@ -15,6 +15,7 @@ import {  dispatchItineraryListener } from "./iteneraries/itineraryListener.js";
 import "./iteneraries/SavedIteneraries.js"
 import { readableObjects } from "./iteneraries/SavedIteneraries.js";
 import { dispatchWorkingItinerary } from "./iteneraries/workingItinerary.js"
+import { getEvents, useEvents } from "./events/EventDataProvider.js";
 // import { dispatchDirectionsProvider } from "./directions/DirectionProvider.js"
 
 homePageList()
@@ -36,5 +37,10 @@ dispatchWeather()
 dispatchItineraryListener()
 readableObjects();
 dispatchWorkingItinerary()
+getEvents()
+.then(() => {
+    console.log("events: ", useEvents())
+})
+
 
 // dispatchDirectionsProvider();
