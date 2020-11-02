@@ -1,5 +1,5 @@
 import { readableObjects } from "./SavedIteneraries.js";
-import { useWorkingIteneraries } from "./workingItinerary.js";
+import { useWorkingAttractions, useWorkingIteneraries } from "./workingItinerary.js";
 
 // Empty array to eventually store the objects from the local api
 let savedItineraries = []
@@ -23,50 +23,57 @@ export const getItinerariesEateries=()=>{
     .then(response => response.json())
     .then(parsedItineraries => savedItineraryEateries = parsedItineraries)
 }
+
 export const getItinerariesAttractions=()=>{
     return fetch("http://localhost:8088/itineraryAttraction")
     .then(response => response.json())
     .then(parsedItineraries => savedItineraryAttractions = parsedItineraries)
 }
 
-
-
-
-export const saveItinerary = (itenObj) => {
-
+// push park into itineraryArray
+export const saveItinerary = (itinObj) => {
     return fetch("http://localhost:8088/itineraries", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(itenObj)
-    }).then(getItineraries)
-    .then( fetch ("http://localhost:8088/itineraryEatery", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(itenObj)
+        body: JSON.stringify(itinObj)
     })
-    .then(fetch ("http://localhost:8088/itineraryAttraction", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(itenObj)
-    })
-
-    )
-        
-    )
+    .then(getItineraries)
     .then(readableObjects)
 }
+// push the Itineraries Attraction into that array
+export const saveItineraryAttraction=(itinObj)=>{
+    return fetch ("http://localhost:8088/itineraryAttraction", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(itinObj)
+    })
+}
+// push the Itineraries Eatery into that array
+export const saveItineraryEatery=()=>{
+    then( fetch ("http://localhost:8088/itineraryEatery", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(itinObj)
+    })
+    )
+}
+
+
 
 eventHub.addEventListener("click", e => {
     if(e.target.id === "itinerarySave" && e.target.classList.contains("buttonSelectable")) {
-        const itenObj = {
+        const itineraryObj = {
             itenerary: useWorkingIteneraries()
-        }
-        saveItinerary(itenObj);
+        } 
+        
+        saveItinerary(itineraryObj);
+        saveItineraryAttraction(itineraryObj)
+        saveItineraryEatery(itineraryObj)
     }
 })
