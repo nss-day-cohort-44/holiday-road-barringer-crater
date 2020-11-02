@@ -21,8 +21,10 @@ const render = (itineraryArr) => {
         containerHTML += `
         <div class="savedItineraryCard">
         <h2>${itinerary.park.fullName}</h2>
-        <p>Attractions:${attractionsString}</p>
-        <p>Eateries:${eateriesString}</p>
+        <h3>Attractions:</h3>
+        ${attractionsString}
+        <h3>Eateries:</h3>
+        ${eateriesString}
         </div>
         `
     }
