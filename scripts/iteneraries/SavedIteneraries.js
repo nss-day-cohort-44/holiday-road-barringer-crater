@@ -31,9 +31,13 @@ const render = (itineraryArr) => {
     contentContainer.innerHTML = containerHTML;
 }
 
+export const readableObjects = () => {
+    
+}
+
 // Takes the objects from the local api and converts them into an object with names instead of just id numbers
 
-export const readableObjects = () => {
+/*export const readableObjects = () => {
     getParks()
         .then(getItineraries)
         .then(getEateries)
@@ -73,4 +77,4 @@ export const readableObjects = () => {
             }
             render(ObjectsArr)
         })
-}
+}*/
