@@ -24,6 +24,44 @@
         }
       ],
       "id": 1
+    },
+    {
+      "itenerary": [
+        {
+          "id": "6D82D070-995A-4524-A56E-C1CE182E7D9B",
+          "type": "park"
+        },
+        {
+          "id": 20,
+          "type": "eatery"
+        },
+        {
+          "id": 11,
+          "type": "attraction"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "itenerary": [
+        {
+          "id": "7DC1050A-0DDE-4EF9-B777-3C9349BCC4DE",
+          "type": "park"
+        },
+        {
+          "id": 21,
+          "type": "attraction"
+        },
+        {
+          "id": 27,
+          "type": "eatery"
+        },
+        {
+          "id": 37,
+          "type": "eatery"
+        }
+      ],
+      "id": 3
     }
   ]
 }
