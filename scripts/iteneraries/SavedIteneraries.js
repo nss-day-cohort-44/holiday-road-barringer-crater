@@ -52,15 +52,15 @@ export const readableObjects = () => {
                 const attractionObjects = []
                 const eateryObjects = []
                 const selectedAttractions = savedItinerary.itenerary.filter(attraction => attraction.type === "attraction")
-                console.log("selected attractions", selectedAttractions)
-                console.log("T or F", Array.isArray(selectedAttractions))
+                // console.log("selected attractions", selectedAttractions)
+                // console.log("T or F", Array.isArray(selectedAttractions))
                 for (const attraction of selectedAttractions) {
                     attractionObjects.push(attractionsArr.find(ao => ao.id === parseInt(attraction.id)))
                 }
                 
-                console.log("attractionObjects: ", attractionObjects)
+                // console.log("attractionObjects: ", attractionObjects)
                 const selectedEateries = savedItinerary.itenerary.filter(eatery => eatery.type === "eatery")
-                console.log("eateries selected", selectedEateries)
+                // console.log("eateries selected", selectedEateries)
                 for (const eatery of selectedEateries) {
                     eateryObjects.push(eateryArr.find(eateryObj => eateryObj.id === parseInt(eatery.id)))
                 }
