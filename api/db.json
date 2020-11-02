@@ -3,40 +3,6 @@
     {
       "id": 1,
       "parkId": "6DA17C86-088E-4B4D-B862-7C1BD5CF236B"
-    },
-    {
-      "itenerary": [
-        {
-          "id": "E6E1D22A-7A89-47F8-813C-B611059A8CF9",
-          "type": "park"
-        },
-        {
-          "id": 7,
-          "type": "attraction"
-        },
-        {
-          "id": 20,
-          "type": "eatery"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "itenerary": [
-        {
-          "id": "E6E1D22A-7A89-47F8-813C-B611059A8CF9",
-          "type": "park"
-        },
-        {
-          "id": 7,
-          "type": "attraction"
-        },
-        {
-          "id": 20,
-          "type": "eatery"
-        }
-      ],
-      "id": 3
     }
   ],
   "itineraryEatery": [
@@ -46,43 +12,9 @@
       "eateryId": 8
     },
     {
-      "id": 2,
+      "id": 1,
       "itineraryId": 1,
-      "eateryId": 19
-    },
-    {
-      "itenerary": [
-        {
-          "id": "E6E1D22A-7A89-47F8-813C-B611059A8CF9",
-          "type": "park"
-        },
-        {
-          "id": 7,
-          "type": "attraction"
-        },
-        {
-          "id": 20,
-          "type": "eatery"
-        }
-      ],
-      "id": 3
-    },
-    {
-      "itenerary": [
-        {
-          "id": "E6E1D22A-7A89-47F8-813C-B611059A8CF9",
-          "type": "park"
-        },
-        {
-          "id": 7,
-          "type": "attraction"
-        },
-        {
-          "id": 20,
-          "type": "eatery"
-        }
-      ],
-      "id": 4
+      "eateryId": 2
     }
   ],
   "itineraryAttraction": [
@@ -95,27 +27,6 @@
       "id": 2,
       "itineraryId": 1,
       "attractionId": 13
-    },
-    {
-      "attractionId": [
-        {
-          "attractionId": {
-            "id": 7,
-            "name": "Avery’s Beverages",
-            "state": "CT",
-            "city": "New Britain",
-            "description": "This tiny soda factory is also the oldest bottling plant in New England and has been around for almost 100 years. Tours of Avery’s Beverages are highly coveted, as visitors get to make three bottles of their own soda! Be sure to call in advance before your tour to make sure they are bottling the day you go.",
-            "ameneties": {
-              "souvenirs": true,
-              "restrooms": true
-            }
-          }
-        }
-      ],
-      "id": 3
-    },
-    {
-      "id": 4
     }
   ]
 }
