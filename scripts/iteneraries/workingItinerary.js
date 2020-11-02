@@ -13,9 +13,7 @@ const eventHub = document.querySelector(".container")
  let workingItineraryEatery=[]
  let workingItineraryAttraction=[]
 
-<<<<<<< HEAD
 export const useWorkingAttractions= () => workingItineraryAttraction.slice()
-=======
 export const setParkButtonClassAdded = (bool) => {
   parkButtonClassAdded = bool;
 }
@@ -28,7 +26,6 @@ export const setAttractionButtonClassAdded = (bool) => {
   attractionButtonClassAdded = bool;
 }
 
->>>>>>> master
 export const useWorkingIteneraries = () => workingItinerariesArray.slice();
 export const useWorkingEateries= () => workingItineraryEatery.slice()
 

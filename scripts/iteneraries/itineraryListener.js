@@ -1,7 +1,7 @@
 import { saveItinerary, saveItineraryAttraction, saveItineraryEatery } from "./itineraryDataProvider.js"
-import { useWorkingIteneraries, useWorkingAttractions, useWorkingEateries } from "./workingItinerary.js";
-import { saveItinerary } from "./itineraryDataProvider.js"
-import { useWorkingIteneraries, checkWorkingItin } from "./workingItinerary.js";
+import { useWorkingIteneraries, checkWorkingItin, useWorkingAttractions, useWorkingEateries } from "./workingItinerary.js";
+//import { saveItinerary } from "./itineraryDataProvider.js"
+
 
 
 const eventHub = document.querySelector(".container");
