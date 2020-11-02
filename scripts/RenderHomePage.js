@@ -67,6 +67,10 @@ const render = () => {
     <aside class="savedItineraries" id="savedAnchor">
          
     </aside>
+    <section>
+        <div class="directionsRender">
+        </div>
+    </section>
     <footer>© Barringer Crater, Inc. All rights reserved.</footer>
 
 
