@@ -1,5 +1,7 @@
-import { saveItinerary } from "./itineraryDataProvider.js"
-import { useWorkingIteneraries, checkWorkingItin } from "./workingItinerary.js";
+import { saveItinerary, saveItineraryAttraction, saveItineraryEatery } from "./itineraryDataProvider.js"
+import { useWorkingIteneraries, checkWorkingItin, useWorkingAttractions, useWorkingEateries } from "./workingItinerary.js";
+//import { saveItinerary } from "./itineraryDataProvider.js"
+
 
 
 const eventHub = document.querySelector(".container");
@@ -51,9 +53,20 @@ export const dispatchItineraryListener = () => {
 
 eventHub.addEventListener("click", e => {
     if(e.target.id === "itinerarySave" && e.target.classList.contains("buttonSelectable")) {
-        const itenObj = {
-            itenerary: useWorkingIteneraries()
+        let itineraryToPush=useWorkingIteneraries()
+        saveItinerary(itineraryToPush[0]).then(()=> {
+        let itineraryAttractionToPush=useWorkingAttractions()
+
+        for (const attractions of itineraryAttractionToPush){
+            saveItineraryAttraction(attractions)
         }
-        saveItinerary(itenObj);
+
+        let itineraryEateryToPush=useWorkingEateries()
+        for (const eatery of itineraryEateryToPush){
+            saveItineraryEatery(eatery)
+        }
+    })
+
     }
 })
+
