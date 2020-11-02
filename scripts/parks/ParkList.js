@@ -1,3 +1,4 @@
+import { setParkButtonClassAdded } from "../iteneraries/workingItinerary.js";
 import { useParks } from "./ParkProvider.js"
 export const dispatchParkList=()=>{
 
@@ -30,7 +31,9 @@ eventHub.addEventListener("click", e => {
         eventHub.dispatchEvent(detailEvent);
     } else if(e.target.id === "parkAdd") {
         //console.log("it was clicked")
-        const parkId = document.querySelector("#tripDropDown__parks").value 
+        const parkId = document.querySelector("#tripDropDown__parks").value
+        if(parkId !== "0") setParkButtonClassAdded(true); 
+        else setParkButtonClassAdded(false);
         const addParkBtnClicked = new CustomEvent("ParkAdded", {
             detail: {
                 parkId: parkId,

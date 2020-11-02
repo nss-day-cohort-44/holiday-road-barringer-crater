@@ -21,7 +21,6 @@ export const checkItenerary = (ev) => {
             attractions = ev.detail.attractionId;
             break;
     }
-        console.log("here is what we look 4",parks, eateries, attractions)
     let e;
 
     if (parks !== "0" && eateries !== 0 && attractions !== 0) {

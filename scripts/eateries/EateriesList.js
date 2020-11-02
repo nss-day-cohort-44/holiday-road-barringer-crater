@@ -1,3 +1,4 @@
+import { setEateryButtonClassAdded } from "../iteneraries/workingItinerary.js"
 import {useEateries} from "./EateryProvider.js"
 
 export const dispatchEatariesList=()=>{
@@ -55,7 +56,9 @@ eventHub.addEventListener("click", e => {
   }
   else if(e.target.id === "eateryAdd") {
     console.log("it was clicked")
-    const eateryId = document.querySelector("#tripDropDown__eatery").value 
+    const eateryId = document.querySelector("#tripDropDown__eatery").value
+    if(eateryId !== "0") setEateryButtonClassAdded(true);
+    else setEateryButtonClassAdded(false);
     const addEateryBtnClicked = new CustomEvent("eateryAdded", {
         detail: {
             eateryId: parseInt(eateryId),
