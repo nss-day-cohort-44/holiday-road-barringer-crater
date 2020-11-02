@@ -17,6 +17,7 @@ import { readableObjects } from "./iteneraries/SavedIteneraries.js";
 import { dispatchWorkingItinerary } from "./iteneraries/workingItinerary.js"
 import { getEvents, useEvents } from "./events/EventDataProvider.js";
 // import { dispatchDirectionsProvider } from "./directions/DirectionProvider.js"
+ import { dispatchDirectionsProvider } from "./directions/DirectionProvider.js"
 
 homePageList()
 dispatchAttractionSelect()
@@ -43,4 +44,4 @@ getEvents()
 })
 
 
-// dispatchDirectionsProvider();
+dispatchDirectionsProvider();

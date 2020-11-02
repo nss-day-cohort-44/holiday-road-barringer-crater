@@ -19,10 +19,11 @@ getAttractions().then(()=>{
 // this is the event listener which dispatches the chosen attractions id as the value
 eventHub.addEventListener("change", event => {
     if (event.target.id === "tripDropDown__attractions") {
-        console.log("I'm broadcasting")
+        //console.log("I'm broadcasting")
         const attraction = new CustomEvent("chosenAttraction", {
             detail: {
-                chosenAttraction: parseInt(event.target.value)
+                chosenAttraction: parseInt(event.target.value),
+                type: "attraction"
             }
         })
         // console.log(attraction)
