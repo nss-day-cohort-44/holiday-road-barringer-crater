@@ -7,7 +7,6 @@ export const dispatchDirectionsProvider = () => {
         &limit=10&key=${keys.graphhopperKey}&provider=nominatim`)
             .then(response => response.json())
             .then(parsedResponse => {
-                console.log("parsedResponse: ", parsedResponse.hits[0], "place: ", place)
                 locations.push(
                     {
                         order: listOrder,
@@ -19,7 +18,6 @@ export const dispatchDirectionsProvider = () => {
 
     const sortLocations = () => {
         locations.sort((elemOne, elemTwo) => {
-            console.log("test")
             return elemOne.order - elemTwo.order;
         })
     }
@@ -32,11 +30,24 @@ export const dispatchDirectionsProvider = () => {
                 chain.push(getLocation(locArray[i], i))
             }
         }
-    return Promise.all(chain)
-}
+        Promise.all(chain).then(() => {
+            sortLocations();
+            let queryString = "";
+            let directionsString = "";
+            for (const location of locations) {
+                queryString += `&point=${location.loc.point.lat},${location.loc.point.lng}`
+            }
+            return fetch(`https://graphhopper.com/api/1/route?key=${keys.graphhopperKey}${queryString}`)
+                .then(response => response.json())
+                .then(parsedResponse => {
+                    console.log(parsedResponse);
+                    for(const item of parsedResponse.paths[0].instructions) {
+                        directionsString += item.text + "\n";
+                    }
+                    console.log(directionsString)
+                })
+        })
+    }
 
-getDirections(["Nashville, TN", "Los Angeles, CA", "Huntsville, AL", "Anchorage, AK"]).then(() => {
-    sortLocations();
-    console.log("sorted locations: ", locations);
-});
+    getDirections(["Nashville, TN", "Los Angeles, CA", "Huntsville, AL", "Anchorage, AK"]);
 }
