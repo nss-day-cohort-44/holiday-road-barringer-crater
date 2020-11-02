@@ -30,7 +30,7 @@ eventHub.addEventListener("change", (changeEvent) => {
         type: "eatery"
       }
     })
-    console.log(eatery)
+    //console.log(eatery)
     eventHub.dispatchEvent(eatery)
   }
 })

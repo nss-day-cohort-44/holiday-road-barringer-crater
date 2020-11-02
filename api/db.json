@@ -91,6 +91,31 @@
         }
       ],
       "id": 4
+    },
+    {
+      "itenerary": [
+        {
+          "id": "1A47416F-DAA3-4137-9F30-14AF86B4E547",
+          "type": "park"
+        },
+        {
+          "id": 8,
+          "type": "attraction"
+        },
+        {
+          "id": 20,
+          "type": "eatery"
+        },
+        {
+          "id": 20,
+          "type": "eatery"
+        },
+        {
+          "id": 8,
+          "type": "attraction"
+        }
+      ],
+      "id": 5
     }
   ]
 }
