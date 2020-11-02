@@ -22,7 +22,8 @@ eventHub.addEventListener("change", event => {
         console.log("I'm broadcasting")
         const attraction = new CustomEvent("chosenAttraction", {
             detail: {
-                chosenAttraction: parseInt(event.target.value)
+                chosenAttraction: parseInt(event.target.value),
+                type: "attraction"
             }
         })
         // console.log(attraction)
