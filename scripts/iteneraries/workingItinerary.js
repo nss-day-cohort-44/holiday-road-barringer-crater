@@ -1,6 +1,7 @@
 import { useAttractions } from "../attractions/AttractionProvider.js"
 import { useEateries } from "../eateries/EateryProvider.js"
 import { useParks } from "../parks/ParkProvider.js"
+import { getItineraries, useItineraries } from "./itineraryDataProvider.js"
 
 //attractionAdded
 const eventHub = document.querySelector(".container")
@@ -11,6 +12,8 @@ const eventHub = document.querySelector(".container")
 export const useWorkingAttractions= () => workingItineraryAttraction.slice()
 export const useWorkingIteneraries = () => workingItinerariesArray.slice();
 export const useWorkingEateries= () => workingItineraryEatery.slice()
+
+
 
 //to put selections in working aside
 export const dispatchWorkingItinerary = () => {
@@ -26,10 +29,7 @@ export const dispatchWorkingItinerary = () => {
       contentTarget.innerHTML += `
         <h3>${currentAttraction.name}</h3>
       `
-      // workingItinerariesArray.push({
-      //   id:currentAttraction.id,
-      //   type:"attraction"
-      // })
+      
       // pushing the attraction into an array
       workingItineraryAttraction.push({
         attractionId:currentAttraction.id
@@ -49,16 +49,17 @@ export const dispatchWorkingItinerary = () => {
       `
         <h3>${currentEatery.businessName}</h3>
       `
-      // workingItinerariesArray.push({
-      //   id:currentEatery.id,
-      //   type:"eatery"
-      // })
+     
       // create a new array of just the eateries
+
+      
       workingItineraryEatery.push({
-        EateryId:currentEatery.id
+        EateryId:currentEatery.id,
+        itineraryId:counter.id
+        
       })
+      
     }
-    
   })
 
   eventHub.addEventListener("ParkAdded", e=>{
@@ -77,9 +78,9 @@ export const dispatchWorkingItinerary = () => {
           workingItinerariesArray.splice([i],1)
         }
       }
+
       workingItinerariesArray.push({
         parkId:currentPark.id,
-        // type:"park"
       })
       console.log(workingItinerariesArray)
     }

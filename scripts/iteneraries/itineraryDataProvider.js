@@ -31,7 +31,7 @@ export const getItinerariesAttractions = () => {
 }
 
 
-
+let nextID=""
 // push park into itineraryArray
 export const saveItinerary = (itinObj) => {
     return fetch("http://localhost:8088/itineraries", {
@@ -40,12 +40,13 @@ export const saveItinerary = (itinObj) => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(itinObj)
-    })
+    }).then(response=>response.json()).then(parseResponse=> nextID=parseResponse.id)
         // .then(getItineraries)
-        // .then(readableObjects)
+     // .then(readableObjects)
 }
 // push the Itineraries Attraction into that array
 export const saveItineraryAttraction = (itinObj) => {
+    itinObj.itineraryId=nextID
     return fetch("http://localhost:8088/itineraryAttraction", {
         method: "POST",
         headers: {
@@ -56,6 +57,8 @@ export const saveItineraryAttraction = (itinObj) => {
 }
 // push the Itineraries Eatery into that array
 export const saveItineraryEatery = (itinObj) => {
+    itinObj.itineraryId=nextID
+
     return fetch("http://localhost:8088/itineraryEatery", {
         method: "POST",
         headers: {

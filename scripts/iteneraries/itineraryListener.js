@@ -47,28 +47,19 @@ export const dispatchItineraryListener = () => {
 eventHub.addEventListener("click", e => {
     if(e.target.id === "itinerarySave" && e.target.classList.contains("buttonSelectable")) {
         let itineraryToPush=useWorkingIteneraries()
-        saveItinerary(itineraryToPush[0]);
+        saveItinerary(itineraryToPush[0]).then(()=> {
         let itineraryAttractionToPush=useWorkingAttractions()
+
         for (const attractions of itineraryAttractionToPush){
             saveItineraryAttraction(attractions)
         }
+
         let itineraryEateryToPush=useWorkingEateries()
         for (const eatery of itineraryEateryToPush){
             saveItineraryEatery(eatery)
         }
+    })
 
     }
 })
 
-// eventHub.addEventListener("click", e => {
-//     if (e.target.id === "itinerarySave" && e.target.classList.contains("buttonSelectable")) {
-//         let theIdentifier=useWorkingIteneraries()
-//         const itineraryObj = {
-//             ParkId: theIdentifier[0]
-//         }
-//         console.log(itineraryObj)
-//         // saveItinerary(itineraryObj);
-//         // saveItineraryAttraction(itineraryObj)
-//         // saveItineraryEatery(itineraryObj)
-//     }
-// })
