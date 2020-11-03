@@ -16,8 +16,7 @@ import "./iteneraries/SavedIteneraries.js"
 import { readableObjects } from "./iteneraries/SavedIteneraries.js";
 import { dispatchWorkingItinerary } from "./iteneraries/workingItinerary.js"
 import { dispatchSearchBarSelect } from "./searchBar/searchBarSelect.js";
-// import { dispatchDirectionsProvider } from "./directions/DirectionProvider.js"
- import { dispatchDirectionsProvider } from "./directions/DirectionProvider.js"
+import "./directions/DirectionProvider.js"
 
 homePageList()
 dispatchAttractionSelect()
@@ -39,6 +38,3 @@ dispatchItineraryListener()
 readableObjects();
 dispatchWorkingItinerary()
 dispatchSearchBarSelect()
-// dispatchDirectionsProvider();
-
-dispatchDirectionsProvider();
