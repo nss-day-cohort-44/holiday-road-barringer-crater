@@ -68,11 +68,11 @@ const render = () => {
          
     </aside>
 
-    <section class=searchBar>
+    <section class=searchBar id=searchAnchor>
     <h3>Find Your Own Way<h3>
-    <p>Search any of our databases to find what you are looking for</p>
+    <p><i>Search any of our databases to find what you are looking for</i></p>
     <input type="text" placeholder="search" id=searchBar>
-    <div class=searchBar__output> Output will be here </div>
+    <div class=searchBar__output> </div>
 
     </section>
     <footer>© Barringer Crater, Inc. All rights reserved.</footer>
