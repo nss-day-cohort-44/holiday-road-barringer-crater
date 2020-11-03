@@ -28,8 +28,8 @@ const render = (itineraryArr) => {
         ${attractionsString}
         <h3>Eateries:</h3>
         ${eateriesString}
-        <button id=events--${itinerary.id}>Events</button>
-        <button id=directions--${itinerary.id}>Directions</button>
+        <button id="events--${itinerary.id}">Events</button>
+        <button id="directions--${itinerary.id}">Directions</button>
         </div>
         `
     }
