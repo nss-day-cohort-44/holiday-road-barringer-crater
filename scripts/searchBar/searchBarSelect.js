@@ -8,18 +8,26 @@ export const dispatchSearchBarSelect=()=>{
         if (keyPressEvent.charCode === 13) {
             const searchFunction=()=>{
             const attractionArray = useAttractions()    
-            let foundItem = attractionArray.find(searchedItem => searchedItem.description.includes(keyPressEvent.target.value))
+            let foundItem = attractionArray.filter(searchedItem => searchedItem.description.includes(keyPressEvent.target.value))
             return foundItem
             }
 
-            let foundItemToHTML=searchFunction()
-            
-            contentTarget.innerHTML = `
+            let listOfFoundItem=searchFunction()
+            console.log(listOfFoundItem)
+            let foundItemHTML=""
+            for (const item of listOfFoundItem){
+                foundItemHTML+=render(item)
+            }
+            contentTarget.innerHTML =foundItemHTML
 
-                <p>${foundItemToHTML.name}</p>
-                
-            `;
+
+            
         }
     });
    
+}
+
+const render=(foundObj)=>{
+
+    return `<p>${foundObj.name}</p>`
 }

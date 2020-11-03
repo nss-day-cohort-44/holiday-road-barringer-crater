@@ -51,7 +51,7 @@ const render = () => {
           </div>
      </section>  <!--closes preview Itinerary -->
      <aside >
-         <h4>Your Plans</h4>
+         <h2>Your Plans</h2>
          <div class="addedParksHere">
         
          </div>

@@ -1,3 +1,4 @@
+import { setAttractionButtonClassAdded } from "../iteneraries/workingItinerary.js"
 import {useAttractions} from "./AttractionProvider.js"
 //  Targets the main container as the eventhub
 export const dispatchAttractionList=()=>{
@@ -45,10 +46,13 @@ eventHub.addEventListener("click", clickEvent => {
 //Create else if add button
     } else if(clickEvent.target.id === "attractionAdd") {
         //console.log("it was clicked")
-        const attractionId = document.querySelector("#tripDropDown__attractions").value 
+        const attractionId = document.querySelector("#tripDropDown__attractions").value
+        if(attractionId !== "0") setAttractionButtonClassAdded(true);
+        else setAttractionButtonClassAdded(false);
         const addAttractionBtnClicked = new CustomEvent("attractionAdded", {
             detail: {
-                attractionId: parseInt(attractionId)
+                attractionId: parseInt(attractionId),
+                type: "attraction"
             }
         })
         //console.log("add attraction button clicked")
