@@ -81,7 +81,7 @@ const render = () => {
     <div class=searchBar__output> </div>
 
     </section>
-    <footer>© Barringer Crater, Inc. All rights reserved.</footer>
+    <footer id="endAnchor">© Barringer Crater, Inc. All rights reserved.</footer>
 
 
     `
