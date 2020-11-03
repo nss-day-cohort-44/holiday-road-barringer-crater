@@ -5,7 +5,7 @@ html {
     font-weight: 300;
     font-size: 16px;
     overflow: scroll;
-    scroll-behavior: smooth;
+    
 }
 
 header{
@@ -19,7 +19,7 @@ header{
     /* //background-position: 100% 40%; */
     text-align: left;
     color: white;
-    padding: 200px 0 150px 120px;
+    padding: 20px 15px 320px 100px;
     
 }
 
@@ -28,6 +28,7 @@ h1 {
     font-weight: 300;
     word-spacing: 4px; 
     letter-spacing: 2px;
+    padding-top: 220px;
 }
 
 h2 {
@@ -222,6 +223,58 @@ footer {
 .weatherPicture{
     width: 30px;
 }
+
+/* Nav Styling */
+.main-nav {
+    float: right;
+    list-style: none;
+    
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.main-nav li {
+    
+    margin: 2px 0 15px 40px;
+    
+}
+
+.main-nav li a:link, 
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 90%;
+    border-bottom: 2px solid #6684e9 transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #6684e9
+}
+
+/* search bar styling */
+.searchBar {
+    padding: 25px 15px;
+    background-color: #ededed;
+}
+
+.searchBar__output {
+    font-size: 16px;  
+}
+
+/* directions  */
+.directionsRender {
+    height: 200px;
+    width: 50%;
+    overflow: auto;
+    padding: 20px;
+    
+}
+
 .savedTripDetails {
     display: flex;
 }
