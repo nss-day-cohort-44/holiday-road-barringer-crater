@@ -127,6 +127,7 @@ eventHub.addEventListener("click", clickEvent => {
        
        //empty array, find function from useEateries
        //pul out form that city, statecode
+       const directionsRequested = useItineraries().find()
        
     }
    
