@@ -219,3 +219,30 @@ footer {
 .weatherPicture{
     width: 30px;
 }
+
+/* Nav Styling */
+.main-nav {
+    float: right;
+    list-style: none;
+    padding-top: 44px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin: 2px 0 15px 40px;
+}
+
+.main-nav li a:link, 
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 90%;
+    border-bottom: 2px solid #d7dced transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #d7dced
+}
