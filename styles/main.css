@@ -256,8 +256,19 @@ footer {
 /* search bar styling */
 .searchBar {
     padding: 25px 15px;
+    background-color: #ededed;
 }
 
 .searchBar__output {
     font-size: 16px;  
 }
+
+/* directions  */
+.directionsRender {
+    height: 200px;
+    width: 50%;
+    overflow: auto;
+    padding: 20px;
+    
+}
+

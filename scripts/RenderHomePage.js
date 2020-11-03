@@ -67,7 +67,11 @@ const render = () => {
     <aside class="savedItineraries" id="savedAnchor">
          
     </aside>
-
+    <section>
+        <div class="directionsRender" id="directionAnchor">
+            
+        </div>
+    </section>
     <section class=searchBar id=searchAnchor>
     <h3>Find Your Own Way<h3>
     <p><i>Search any of our databases to find what you are looking for</i></p>
