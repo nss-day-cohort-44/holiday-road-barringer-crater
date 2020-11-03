@@ -17,7 +17,6 @@ export const dispatchEventList = () => {
             // If there ARE events at the selected location, render the following to the DOM
             if (events.length !== 0) {
             let eventHtmlString = ""
-            console.log("here are the events:", events)
             for (const event of events) {
                 eventHtmlString += `
                 <div class="eventCard">
