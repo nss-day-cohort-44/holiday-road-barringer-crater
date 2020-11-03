@@ -42,12 +42,16 @@ export const dispatchDirectionsProvider = () => {
                 .then(parsedResponse => {
                     console.log(parsedResponse);
                     for(const item of parsedResponse.paths[0].instructions) {
-                        directionsString += item.text + "\n";
+                        
+                        const contentTarget = document.querySelector(".directionsRender")
+                        contentTarget.innerHTML = `<h2>Directions</h2>
+                            <p>${directionsString}</p>`
+                        
                     }
                     console.log(directionsString)
                 })
         })
     }
 
-    getDirections(["Nashville, TN", "Los Angeles, CA", "Huntsville, AL", "Anchorage, AK"]);
+    // getDirections(["Nashville, TN", "Los Angeles, CA", "Huntsville, AL", "Anchorage, AK"]);
 }

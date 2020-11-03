@@ -69,6 +69,7 @@ const render = () => {
     </aside>
     <section>
         <div class="directionsRender">
+            
         </div>
     </section>
     <footer>© Barringer Crater, Inc. All rights reserved.</footer>
