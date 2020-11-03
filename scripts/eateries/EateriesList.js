@@ -55,7 +55,6 @@ eventHub.addEventListener("click", e => {
       eventHub.dispatchEvent(eateryDetailClicked);
   }
   else if(e.target.id === "eateryAdd") {
-    console.log("it was clicked")
     const eateryId = document.querySelector("#tripDropDown__eatery").value
     if(eateryId !== "0") setEateryButtonClassAdded(true);
     else setEateryButtonClassAdded(false);

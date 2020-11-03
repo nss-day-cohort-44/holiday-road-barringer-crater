@@ -40,11 +40,10 @@ export const dispatchDirectionsProvider = () => {
             return fetch(`https://graphhopper.com/api/1/route?key=${keys.graphhopperKey}${queryString}`)
                 .then(response => response.json())
                 .then(parsedResponse => {
-                    console.log(parsedResponse);
                     for(const item of parsedResponse.paths[0].instructions) {
                         directionsString += item.text + "\n";
                     }
-                    console.log(directionsString)
+                    //console.log(directionsString)
                 })
         })
     }
