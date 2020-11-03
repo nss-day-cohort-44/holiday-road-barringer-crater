@@ -5,17 +5,16 @@ export const dispatchEventList = () => {
     const eventHub = document.querySelector(".container")
 
     eventHub.addEventListener("eventDetailsRequested", event => {
-        // console.log("I'm listening")
-        // console.log("event.details", event.detail)
+        // Find the specific itinerary in the json api
         let itinerary = useItineraries().find(i => i.id === parseInt(event.detail.itinId))
-        console.log("itinerary Found!", itinerary)
+        // Find the matching park from the nps api
         let park = useParks().find(p => p.id === itinerary.parkId)
-        console.log("park found!", park)
-        console.log("park code:", park.parkCode)
+        // call the getevents function from event provider and pass the park code from the chosen park as an argument
         getEvents(park.parkCode)
         .then(() => {
             const events = useEvents()
             const contentContainer = document.querySelector(".savedItineraries__events")
+            // If there ARE events at the selected location, render the following to the DOM
             if (events.length !== 0) {
             let eventHtmlString = ""
             console.log("here are the events:", events)
@@ -34,6 +33,7 @@ export const dispatchEventList = () => {
             contentContainer.innerHTML = `
             <h3>Park Events:</h3>
             ${eventHtmlString}`
+            // if there are NO events at the selected park, display the following message
         } else {
             contentContainer.innerHTML = `<h3>Park Events:</h3><p>We're sorry, this location does not have scheduled events.</p>`
         }
