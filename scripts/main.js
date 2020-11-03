@@ -18,6 +18,7 @@ import { dispatchWorkingItinerary } from "./iteneraries/workingItinerary.js"
 import { getEvents, useEvents } from "./events/EventDataProvider.js";
 // import { dispatchDirectionsProvider } from "./directions/DirectionProvider.js"
  import { dispatchDirectionsProvider } from "./directions/DirectionProvider.js"
+import { dispatchEventList } from "./events/eventList.js";
 
 homePageList()
 dispatchAttractionSelect()
@@ -38,10 +39,7 @@ dispatchWeather()
 dispatchItineraryListener()
 readableObjects();
 dispatchWorkingItinerary()
-getEvents()
-.then(() => {
-    console.log("events: ", useEvents())
-})
 
 
 dispatchDirectionsProvider();
+dispatchEventList()

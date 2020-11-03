@@ -7,6 +7,23 @@ import { getEateries, useEateries } from "../eateries/EateryProvider.js"
 import { getAttractions, useAttractions } from "../attractions/AttractionProvider.js"
 //export const dispatchSavedItineraries=()=>{
 
+
+const eventHub =  document.querySelector(".container")
+
+eventHub.addEventListener("click", event => {
+    if (event.target.id.startsWith("events--")) {
+        const [prefix, itinId] = event.target.id.split("--")
+        // console.log("itinId: ", itinId)
+        const requestedEvents = new CustomEvent("eventDetailsRequested", {
+            detail: {
+                itinId
+            }
+        })
+        // console.log("I'm broadcasting")
+        eventHub.dispatchEvent(requestedEvents)
+    }
+})
+
 // Takes an object and makes it html readable
 const render = (itineraryArr) => {
     const contentContainer = document.querySelector(".savedItineraries")
@@ -63,7 +80,7 @@ export const readableObjects = () => {
                     attractions.push(useAttractions().find(obj => obj.id == attraction.attractionId))
                 }
                 const itinObj =
-                {
+                {   id: itin.id,
                     attractions,
                     eateries,
                     park
