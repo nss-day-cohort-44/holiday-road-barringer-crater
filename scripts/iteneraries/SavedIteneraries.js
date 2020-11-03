@@ -124,10 +124,10 @@ eventHub.addEventListener("click", clickEvent => {
   
     if (clickEvent.target.id.startsWith("directions--")) {
        console.log("I clicked button", clickEvent)
-       const 
+       
        //empty array, find function from useEateries
        //pul out form that city, statecode
        
-     }
+    }
    
    })
