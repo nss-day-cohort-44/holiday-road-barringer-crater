@@ -1,32 +1,22 @@
 {
   "itineraries": [
     {
-      "id": 1,
-      "parkId": "6DA17C86-088E-4B4D-B862-7C1BD5CF236B"
+      "parkId": "64B9F127-31ED-43C9-882D-D7CD471AF314",
+      "id": 1
     }
   ],
   "itineraryEatery": [
     {
-      "id": 1,
+      "eateryId": 18,
       "itineraryId": 1,
-      "eateryId": 8
-    },
-    {
-      "id": 1,
-      "itineraryId": 1,
-      "eateryId": 2
+      "id": 1
     }
   ],
   "itineraryAttraction": [
     {
-      "id": 1,
+      "attractionId": 3,
       "itineraryId": 1,
-      "attractionId": 2
-    },
-    {
-      "id": 2,
-      "itineraryId": 1,
-      "attractionId": 13
+      "id": 1
     }
   ]
 }

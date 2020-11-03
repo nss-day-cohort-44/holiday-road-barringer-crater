@@ -29,6 +29,7 @@ const render = (itineraryArr) => {
         <h3>Eateries:</h3>
         ${eateriesString}
         <button id=events--${itinerary.id}>Events</button>
+        <button id=directions--${itinerary.id}>Directions</button>
         </div>
         `
     }
@@ -37,45 +38,40 @@ const render = (itineraryArr) => {
 
 export const readableObjects = () => {
 
+    let itinArr = [];
+
     getItineraries()
         .then(getEateries)
         .then(getAttractions)
         .then(getParks)
+        .then(getItinerariesEateries)
+        .then(getItinerariesAttractions)
         .then(() => {
             for (const itin of useItineraries()) {
-                let itinArr = [];
-                let eateriesArr = [];
                 let eateries = [];
+                let eateriesArr = [];
                 let attractions = [];
                 let attractionsArr = [];
                 let park = useParks().find(park => park.id === itin.parkId);
-                getItinerariesEateries().then(() => {
-                    eateriesArr = useItinerariesEateries().filter(eatery => eatery.itineraryId === itin.id);
-                    for(const eatery of eateriesArr) {
-                        eateries.push(useEateries().find(obj => obj.id === eatery.eateryId));
-                    }
-                }).then(() => {
-                    getItinerariesAttractions().then(() => {
-                        attractionsArr = useItinerariesAttractions().filter(
-                            attraction => attraction.itineraryId === itin.id);
-                        for (const attraction of attractionsArr) {
-                            attractions.push(useAttractions().find(obj => obj.id == attraction.attractionId))
-                        }
-                    }).then(() => {
-                        const itinObj =
-                        {
-                            attractions,
-                            eateries,
-                            park
-                        }
-                        itinArr.push(itinObj);
-
-                    }).then(() => {
-                        render(itinArr);
-                    });
-                });
+                eateriesArr = useItinerariesEateries().filter(eatery => eatery.itineraryId === itin.id);
+                for (const eatery of eateriesArr) {
+                    eateries.push(useEateries().find(obj => obj.id === eatery.eateryId));
+                }
+                attractionsArr = useItinerariesAttractions().filter(
+                    attraction => attraction.itineraryId === itin.id);
+                for (const attraction of attractionsArr) {
+                    attractions.push(useAttractions().find(obj => obj.id == attraction.attractionId))
+                }
+                const itinObj =
+                {
+                    attractions,
+                    eateries,
+                    park
+                }
+                itinArr.push(itinObj);
             }
-        });
+            render(itinArr);
+        })
 }
 
 // Takes the objects from the local api and converts them into an object with names instead of just id numbers

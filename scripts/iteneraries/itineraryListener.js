@@ -1,4 +1,5 @@
 import { saveItinerary, saveItineraryAttraction, saveItineraryEatery } from "./itineraryDataProvider.js"
+import { readableObjects } from "./SavedIteneraries.js";
 import { useWorkingIteneraries, checkWorkingItin, useWorkingAttractions, useWorkingEateries } from "./workingItinerary.js";
 //import { saveItinerary } from "./itineraryDataProvider.js"
 
@@ -63,6 +64,8 @@ eventHub.addEventListener("click", e => {
         for (const eatery of itineraryEateryToPush){
             saveItineraryEatery(eatery)
         }
+
+        readableObjects();
     })
 
     }
