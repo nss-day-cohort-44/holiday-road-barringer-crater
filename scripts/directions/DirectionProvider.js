@@ -22,7 +22,8 @@ const sortLocations = () => {
 }
 
 export const getDirections = (locArray) => {
-    let chain = []
+    let chain = [];
+    locations = [];
     chain.push(getLocation(locArray[0], 0));
     if (locArray.length > 1) {
         for (let i = 1; i < locArray.length; i++) {
@@ -32,7 +33,6 @@ export const getDirections = (locArray) => {
     Promise.all(chain).then(() => {
         sortLocations();
         let queryString = "";
-        let directionsString = "";
         for (const location of locations) {
             queryString += `&point=${location.loc.point.lat},${location.loc.point.lng}`
         }
