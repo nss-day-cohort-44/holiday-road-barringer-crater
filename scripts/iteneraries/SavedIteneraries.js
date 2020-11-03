@@ -1,4 +1,7 @@
-import { getItineraries, useItineraries } from "./itineraryDataProvider.js"
+import {
+    getItineraries, useItinerariesAttractions, useItinerariesEateries,
+    getItinerariesEateries, getItinerariesAttractions, useItineraries
+} from "./itineraryDataProvider.js"
 import { getParks, useParks } from "../parks/ParkProvider.js"
 import { getEateries, useEateries } from "../eateries/EateryProvider.js"
 import { getAttractions, useAttractions } from "../attractions/AttractionProvider.js"
@@ -25,15 +28,55 @@ const render = (itineraryArr) => {
         ${attractionsString}
         <h3>Eateries:</h3>
         ${eateriesString}
+        <button id="events--${itinerary.id}">Events</button>
+        <button id="directions--${itinerary.id}">Directions</button>
         </div>
         `
     }
     contentContainer.innerHTML = containerHTML;
 }
 
+export const readableObjects = () => {
+
+    let itinArr = [];
+
+    getItineraries()
+        .then(getEateries)
+        .then(getAttractions)
+        .then(getParks)
+        .then(getItinerariesEateries)
+        .then(getItinerariesAttractions)
+        .then(() => {
+            for (const itin of useItineraries()) {
+                let eateries = [];
+                let eateriesArr = [];
+                let attractions = [];
+                let attractionsArr = [];
+                let park = useParks().find(park => park.id === itin.parkId);
+                eateriesArr = useItinerariesEateries().filter(eatery => eatery.itineraryId === itin.id);
+                for (const eatery of eateriesArr) {
+                    eateries.push(useEateries().find(obj => obj.id === eatery.eateryId));
+                }
+                attractionsArr = useItinerariesAttractions().filter(
+                    attraction => attraction.itineraryId === itin.id);
+                for (const attraction of attractionsArr) {
+                    attractions.push(useAttractions().find(obj => obj.id == attraction.attractionId))
+                }
+                const itinObj =
+                {
+                    attractions,
+                    eateries,
+                    park
+                }
+                itinArr.push(itinObj);
+            }
+            render(itinArr);
+        })
+}
+
 // Takes the objects from the local api and converts them into an object with names instead of just id numbers
 
-export const readableObjects = () => {
+/*export const readableObjects = () => {
     getParks()
         .then(getItineraries)
         .then(getEateries)
@@ -57,7 +100,7 @@ export const readableObjects = () => {
                 for (const attraction of selectedAttractions) {
                     attractionObjects.push(attractionsArr.find(ao => ao.id === parseInt(attraction.id)))
                 }
-                
+
                 // console.log("attractionObjects: ", attractionObjects)
                 const selectedEateries = savedItinerary.itenerary.filter(eatery => eatery.type === "eatery")
                 // console.log("eateries selected", selectedEateries)
@@ -73,4 +116,4 @@ export const readableObjects = () => {
             }
             render(ObjectsArr)
         })
-}
+}*/

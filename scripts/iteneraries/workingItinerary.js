@@ -39,7 +39,6 @@ export const dispatchWorkingItinerary = () => {
   eventHub.addEventListener("attractionAdded", e => {
     
     if (e.detail.attractionId !== 0) {
-      console.log("attractionsAdded");
       const attractionsArray = useAttractions()
     const currentAttraction = attractionsArray.find(attractionObj => attractionObj.id === e.detail.attractionId)
       contentTarget.innerHTML += `
@@ -50,8 +49,6 @@ export const dispatchWorkingItinerary = () => {
       workingItineraryAttraction.push({
         attractionId:currentAttraction.id
       })
-
-      console.log(workingItineraryAttraction)
     }
     //ends if
   })//ends eventHub
@@ -64,12 +61,10 @@ export const dispatchWorkingItinerary = () => {
       `
         <h3>${currentEatery.businessName}</h3>
       `
-     
       // create a new array of just the eateries
-
       
       workingItineraryEatery.push({
-        EateryId:currentEatery.id,
+        eateryId:currentEatery.id,
         
       })
       
@@ -101,7 +96,6 @@ export const dispatchWorkingItinerary = () => {
 } //ends export
 
 export const checkWorkingItin = () => {
-  console.log(parkButtonClassAdded, eateryButtonClassAdded, attractionButtonClassAdded)
   if (parkButtonClassAdded && eateryButtonClassAdded && attractionButtonClassAdded) {
     return true
   } else {
