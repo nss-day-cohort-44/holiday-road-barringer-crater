@@ -10,6 +10,8 @@ const eventHub = document.querySelector(".container");
 
 // returns a copy of the savedItineraries array so that the original won't be affected
 export const useItineraries = () => savedItineraries.slice()
+export const useItinerariesEateries = () => savedItineraryEateries.slice()
+export const useItinerariesAttractions = () => savedItineraryAttractions.slice()
 
 // get's the objects from the local api, converts them to json readable and adds them to the savedItineraries array
 export const getItineraries = () => {
@@ -67,6 +69,14 @@ export const saveItineraryEatery = (itinObj) => {
         body: JSON.stringify(itinObj)
     })   
 }
+// eventHub.addEventListener("click", e => {
+//     if (e.target.id === "itinerarySave" && e.target.classList.contains("buttonSelectable")) {
+//         const itineraryObj = {
+//             testing: "Is this going to push?"
+//         }
 
-
-
+//         saveItinerary(itineraryObj);
+//         saveItineraryAttraction(itineraryObj)
+//         saveItineraryEatery(itineraryObj)
+//     }
+// })
