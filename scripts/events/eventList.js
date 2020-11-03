@@ -10,12 +10,34 @@ export const dispatchEventList = () => {
         let itinerary = useItineraries().find(i => i.id === parseInt(event.detail.itinId))
         console.log("itinerary Found!", itinerary)
         let park = useParks().find(p => p.id === itinerary.parkId)
-        // console.log("park found!", park)
-        // console.log("park code:", park.parkCode)
+        console.log("park found!", park)
+        console.log("park code:", park.parkCode)
         getEvents(park.parkCode)
         .then(() => {
-            console.log("here are the events:", useEvents())
+            const events = useEvents()
             const contentContainer = document.querySelector(".savedItineraries__events")
+            if (events.length !== 0) {
+            let eventHtmlString = ""
+            console.log("here are the events:", events)
+            for (const event of events) {
+                eventHtmlString += `
+                <div class="eventCard">
+                <h3>Title: ${event.title}</h3>
+                <p>Start date: ${event.datestart}</p>
+                <p>Start time: ${event.times[0].timestart}</p>
+                <p>End time: ${event.times[0].timeend}</p>
+                <p>Description: ${event.description} </p>
+                <p>Fee info: ${event.feeinfo}</p>
+                </div>
+                `
+            }
+            contentContainer.innerHTML = `
+            <h3>Park Events:</h3>
+            ${eventHtmlString}`
+        } else {
+            contentContainer.innerHTML = `<h3>Park Events:</h3><p>We're sorry, this location does not have scheduled events.</p>`
+        }
+
         })
     })
 }
