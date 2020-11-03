@@ -63,10 +63,12 @@ const render = () => {
         </div>
      </aside>
     </section>
-    
+    <section class="savedTripDetails">
     <aside class="savedItineraries" id="savedAnchor">
          
     </aside>
+    <aside class="savedItineraries__events"></aside>
+    </section> <!--closes savedTripDetails -->
     <section>
         <div class="directionsRender" id="directionAnchor">
             

@@ -110,12 +110,14 @@ body {
 .eateryContent,
 .attractionContent,
 .workingItineraries,
-.savedItineraryCard {
+.savedItineraryCard,
+.eventCard {
     padding: 10px 15px;
 }
 
 
 
+.eventCard > h2,
 .selectedItemCard > h2,
 .savedItineraryCard > h2, 
 h4, 
@@ -130,7 +132,8 @@ h2{
     
 
 }
-.savedItineraryCard{
+.savedItineraryCard,
+.eventCard {
     flex-basis: 30%;
     border: 1px solid black;
     /* padding: 0 3px 0 3px; */
@@ -144,7 +147,7 @@ h2{
 } */
 
 .savedItineraries {
-    flex: 1;
+    flex: 3;
     background-color: #d7dced;
 
 }
@@ -272,3 +275,10 @@ footer {
     
 }
 
+.savedTripDetails {
+    display: flex;
+}
+
+.savedItineraries__events {
+    flex: 1;
+}

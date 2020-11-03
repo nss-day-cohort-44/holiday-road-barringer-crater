@@ -53,7 +53,7 @@ export const dispatchItineraryListener = () => {
 eventHub.addEventListener("click", e => {
     if(e.target.id === "itinerarySave" && e.target.classList.contains("buttonSelectable")) {
         let itineraryToPush=useWorkingIteneraries()
-        saveItinerary(itineraryToPush[0]).then(()=> {
+        saveItinerary(itineraryToPush[itineraryToPush.length-1]).then(()=> {
         let itineraryAttractionToPush=useWorkingAttractions()
 
         for (const attractions of itineraryAttractionToPush){

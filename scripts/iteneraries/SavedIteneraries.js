@@ -9,6 +9,23 @@ import { getDirections } from "../directions/DirectionProvider.js"
 
 //export const dispatchSavedItineraries=()=>{
 
+
+const eventHub =  document.querySelector(".container")
+
+eventHub.addEventListener("click", event => {
+    if (event.target.id.startsWith("events--")) {
+        const [prefix, itinId] = event.target.id.split("--")
+        // console.log("itinId: ", itinId)
+        const requestedEvents = new CustomEvent("eventDetailsRequested", {
+            detail: {
+                itinId
+            }
+        })
+        // console.log("I'm broadcasting")
+        eventHub.dispatchEvent(requestedEvents)
+    }
+})
+
 // Takes an object and makes it html readable
 const render = (itineraryArr) => {
     const contentContainer = document.querySelector(".savedItineraries")
@@ -77,7 +94,7 @@ export const readableObjects = () => {
         })
 }
 
-const eventHub = document.querySelector(".container")
+
 
 eventHub.addEventListener("click", clickEvent => {
   
