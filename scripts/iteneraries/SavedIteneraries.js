@@ -5,6 +5,7 @@ import {
 import { getParks, useParks } from "../parks/ParkProvider.js"
 import { getEateries, useEateries } from "../eateries/EateryProvider.js"
 import { getAttractions, useAttractions } from "../attractions/AttractionProvider.js"
+
 //export const dispatchSavedItineraries=()=>{
 
 // Takes an object and makes it html readable
@@ -117,3 +118,16 @@ export const readableObjects = () => {
             render(ObjectsArr)
         })
 }*/
+const eventHub = document.querySelector(".container")
+
+eventHub.addEventListener("click", clickEvent => {
+  
+    if (clickEvent.target.id.startsWith("directions--")) {
+       console.log("I clicked button", clickEvent)
+       
+       //empty array, find function from useEateries
+       //pul out form that city, statecode
+       
+     }
+   
+   })

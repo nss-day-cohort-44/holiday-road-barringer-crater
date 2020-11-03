@@ -44,13 +44,16 @@ export const dispatchDirectionsProvider = () => {
                         
                         const contentTarget = document.querySelector(".directionsRender")
                         contentTarget.innerHTML = `<h2>Directions</h2>
-                            <p>${directionsString}</p>`
+                            <p class="directions">${directionsString}</p>`
                         
                     }
-                    //console.log(directionsString)
+                    // console.log(directionsString)
                 })
         })
     }
 
     // getDirections(["Nashville, TN", "Los Angeles, CA", "Huntsville, AL", "Anchorage, AK"]);
 }
+
+
+
