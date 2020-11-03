@@ -17,8 +17,9 @@ import { readableObjects } from "./iteneraries/SavedIteneraries.js";
 import { dispatchWorkingItinerary } from "./iteneraries/workingItinerary.js"
 import { getEvents, useEvents } from "./events/EventDataProvider.js";
 // import { dispatchDirectionsProvider } from "./directions/DirectionProvider.js"
- import { dispatchDirectionsProvider } from "./directions/DirectionProvider.js"
 import { dispatchEventList } from "./events/eventList.js";
+import { dispatchSearchBarSelect } from "./searchBar/searchBarSelect.js";
+import "./directions/DirectionProvider.js"
 
 homePageList()
 dispatchAttractionSelect()
@@ -41,5 +42,5 @@ readableObjects();
 dispatchWorkingItinerary()
 
 
-dispatchDirectionsProvider();
 dispatchEventList()
+dispatchSearchBarSelect()
